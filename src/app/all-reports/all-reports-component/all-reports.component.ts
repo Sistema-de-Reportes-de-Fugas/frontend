@@ -3,6 +3,7 @@ import { Report } from '../report';
 import { AllReportsService } from '../services/all-reports.service';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
+
 @Component({
   selector: 'app-all-reports',
   templateUrl: './all-reports.component.html',
@@ -13,9 +14,12 @@ export class AllReportsComponent{
   report: Report[];
   id: string;
   message:string;
+  pageactual: number =1;
+  actualPage: any;
   
   constructor(public Service: AllReportsService){}
   
+  filterPost = "";
   ngOnInit(): void {
     this.getReports();
     this.onSubmit(this.id);

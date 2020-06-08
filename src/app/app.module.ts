@@ -16,9 +16,15 @@ import { AllReportsComponent } from './all-reports/all-reports-component/all-rep
 import { GraficaComponent } from './grafica/grafica.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 // Services
 import { DataApiService } from './services/data-api.service';
 import { RouterModule } from '@angular/router';
+
+//Externals
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from './all-reports/pipes/filter.pipe';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,11 +42,14 @@ export function HttpLoaderFactory(http: HttpClient) {
     PageNotFoundComponent,
     HeaderNoRibbonComponent,
     AllReportsComponent,
-    GraficaComponent
+    GraficaComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    NgxPaginationModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
