@@ -23,6 +23,8 @@ import { RouterModule } from '@angular/router';
 
 //Externals
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from './all-reports/pipes/filter.pipe';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -40,7 +42,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     PageNotFoundComponent,
     HeaderNoRibbonComponent,
     AllReportsComponent,
-    GraficaComponent
+    GraficaComponent,
+    FilterPipe,
+
   ],
   imports: [
     BrowserModule,

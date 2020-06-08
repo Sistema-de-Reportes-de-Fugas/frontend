@@ -16,8 +16,10 @@ export class AllReportsComponent{
   message:string;
   pageactual: number =1;
   actualPage: any;
+  
   constructor(public Service: AllReportsService){}
   
+  filterPost = "";
   ngOnInit(): void {
     this.getReports();
     this.onSubmit(this.id);
