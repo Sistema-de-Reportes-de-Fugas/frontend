@@ -11,7 +11,7 @@
     </div>
     <input class="input-report-id" type="text" placeholder="ingresa aquí tu número de reporte">
     <br><br>
-    <button type="button" id="button-estado" class="btn btn-success">{{ "ESTADO.SEND" | translate }}</button>
+    <button type="button" id="button-estado" class="btn btn-success" (click)="onSubmit()">{{ "ESTADO.SEND" | translate }}</button>
     <br><br>  
     <br>
     <div class="container-list" id="container-list">
