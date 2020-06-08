@@ -34,14 +34,7 @@ export class AllReportsComponent{
     console.log(this.id);
     console.log("holaaa");
     this.newMessage();
-    /*this.Service.getReportes().subscribe((data) => {
-      this.All_reports = data;
-      //this.perro = this.All_reports.find(t=>t.numeroReporte)
-      //console.log(this.perro);
-      let Result = this.All_reports.map(choice => ({ id: "", name: choice._id }));
-      console.log(Result);
-    });
-    */
+    
   }
   newMessage() {
     this.Service.changeMessage(this.id);
