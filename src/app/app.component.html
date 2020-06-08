@@ -1,0 +1,70 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!--
+<label for="">
+    <select #langSelect (change)= "translate.use(langSelect.value)">
+      <option *ngFor= "let lang of translate.getLangs()" [value]="lang">
+        {{ lang }}
+      </option>
+    </select>
+  </label>
+
+<router-outlet></router-outlet>
+
+-->
+<div [@routeAnimations]="prepareRoute(outlet)" >
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
+<app-footer></app-footer>
+<!--
+<app-container-home></app-container-home>
+<app-header></app-header>
+<app-reporte></app-reporte>
+<app-footer></app-footer>
+
+<app-header></app-header>
+<app-reporte-cliente-enviado></app-reporte-cliente-enviado>
+<app-footer></app-footer>
+
+<app-header></app-header>
+<app-estado></app-estado>
+<app-footer></app-footer>
+
+<app-header></app-header>
+<app-admin></app-admin>
+<app-footer></app-footer>
+
+<app-header-admin></app-header-admin>
+<app-reportes-activos></app-reportes-activos>
+<app-footer></app-footer>
+
+<app-header-admin></app-header-admin>
+<app-lista-reportes></app-lista-reportes>
+<app-footer></app-footer>
+
+<app-header-admin></app-header-admin>
+<app-reporte-admin></app-reporte-admin>
+<app-footer></app-footer>
+
+<app-header-admin></app-header-admin>
+<app-reporte-enviado></app-reporte-enviado>
+<app-footer></app-footer>
+
+--->
+
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+

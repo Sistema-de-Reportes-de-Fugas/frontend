@@ -1,0 +1,31 @@
+#navbarNavDropdown{
+    text-align: center;
+  }
+.navbar-toggler{
+    position: fixed;
+    z-index:1000;
+    right: 10px;
+    top: 10px;
+    
+}
+
+@media screen and (max-width: 992px) {
+    .nav-item{
+      border-bottom: 0.2px solid lightgrey; 
+    }
+    .nav-link{
+      font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar img {
+        min-width: 170px;
+    }
+    .nav-item{
+      border-bottom: 0.2px solid lightgrey; 
+    }
+    .nav-link{
+      font-size: 15px;
+    }
+}

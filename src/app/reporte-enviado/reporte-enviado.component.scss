@@ -1,0 +1,17 @@
+
+.container .container-report-comments {
+  text-align: center;
+}
+
+.container .container-report-comments button {
+  display: inline-block;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 450px) {
+  .text-heading {
+    margin-top: 30%;
+  }
+}

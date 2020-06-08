@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/utilities/position";
+@import "~bootstrap/scss/card";
+
+.site-footer .fixed-bottom {
+  background-color: whitesmoke;
+}
+
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.card-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+.text-center {
+  text-align: center !important;
+}

@@ -1,0 +1,25 @@
+<app-header-no-ribbon></app-header-no-ribbon>
+<div class="container">
+  <br>
+  <div class="text-heading">
+    <h1>{{ "ADMIN.TITLE" | translate }}</h1>
+    <br>
+    <h2>{{ "ADMIN.SUBTITLE" | translate }}</h2>
+    <p class="text-secondary">{{ "ADMIN.DESCRIPTION" | translate }}</p>
+  </div>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div id="sign-in">
+      <div class="form-group">
+          <label for="exampleInputEmail1">{{ "ADMIN.CORREO" | translate }}</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu correo" formControlName="correo">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">{{ "ADMIN.CONTRASENA" | translate }}</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" formControlName="contrasena">
+      </div>
+      <button [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active"  class="btn btn-success" type="button" (click)="onSubmit()">{{ "ADMIN.ENVIAR" | translate }} </button>
+    </div>
+  </form>
+  <br><br><br>
+</div>
+<br><br><br>

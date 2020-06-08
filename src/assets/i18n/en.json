@@ -1,0 +1,118 @@
+{
+    "HEADER" : {
+        "INICIO": "Home",
+        "REPORTE": "Report",
+        "ESTADO": "Status",
+        "BETA": "Beta Version"
+    },
+    "HOME" : {
+        "BIENVENIDO": "Welcome!",
+        "SUBTITLE": "Mexico City Water Leak Report System",
+        "MAKEREPORT": "Make a Report!",
+        "REPORTDESC": "Thank you very much for your contribution to the city. If you want to make a water leak report, click here.",
+        "CHECKSTATUS": "Status",
+        "STATUSREPORT": "If you have already made a report and want to know if the leak has already been fixed, click here.",
+        "THEPLATFORM": "The Platform",
+        "THEPLATFORMDESC": "If you want to know more information about this platform click here."
+    },
+    "REPORT": {
+        "TITLE": "Make your leak report",
+        "SUBTITLE": "Thanks for making your report",
+        "DESCRIPTION": "To make your report, we need you to provide us with your first and last name, email, address of the leak, a reference to the address, your profession or what you did when you saw the leak, the report, and if you wish, you can also upload an image.",
+        "NOMBRE": "Name(s)",
+        "APELLIDO": "Last name(s)",
+        "CORREO": "Email",
+        "CORREOPLACE": "example@mail.com",
+        "PROTECCION": "We will not share your email with any institution or dependency",
+        "DIRECCION": "Leak address",
+        "DIRECCIONPLACE": "Write an address",
+        "REFERENCIA": "Address reference",
+        "REFERENCIAPLACE": "Write a reference (street, landmarks, etc.)",
+        "PROFESION":"What were you doing when you spotted the leak?",
+        "PROFESION1":"Reporter",
+        "PROFESION2":"SSP Agent",
+        "PROFESION3":"Passerby",
+        "PROFESION4":"Merchant",
+        "PROFESION5":"Other",
+        "WRITEREPORT": "Write your report:",
+        "IMAGEN": "Image",
+        "ENVIAR": "Send"
+    },
+    "ESTADO": {
+        "TITLE":"Report Status",
+        "SUBTITLE":"Consult your Report",
+        "DESCRIPTION": "Please, enter your report number to see the current status of your request.",
+        "SEND": "SEND",
+        "REPORT": "Report 0000012",
+        "DAYS": "5 days",
+        "STATUS": "Leak Repaired",
+        "CALLE": "Street: Pepito Gonzalez"
+    },
+    "ADMIN": {
+        "TITLE": "Log in to your account",
+        "SUBTITLE": "Welcome",
+        "DESCRIPTION": "Enter the email and password with which you are registered in the system.",
+        "CORREO": "Email",
+        "CONTRASENA": "Password",
+        "ENVIAR": "Send"
+
+    },
+    "CLIENTEENVIADO" : {
+        "TITLE": "Your report has been sent!",
+        "SUBTITLE": "The report number is:",
+        "INICIO": "Home"
+    },
+    "REPORTESACTIVOS" : {
+        "TITLE": "Active Reports",
+        "SUBTITLE": "Welcome",
+        "DESCRIPTION": "To get into the report, please click on it.",
+        "NUMERO1": "00000001",
+        "NUMERO2": "00000002",
+        "NUMERO3": "00000003",
+        "NUMERO4": "00000004",
+        "NUMERO5": "00000005",
+        "NUMERO6": "00000006",
+        "HORA1": "35 minutes", 
+        "HORA2": "1 hour", 
+        "HORA3": "1.3 hours", 
+        "HORA4": "1.3 hours", 
+        "HORA5": "1.43 hours", 
+        "HORA6": "2 hours",
+        "REPORTE": "Good evening, I want to report a leak I spotted near..."
+    },
+    "REPORTADMIN": {
+        "TITLE": "Report",
+        "SUBTITLE": "Report #",
+        "DESCRIPTION":"Report Information:", 
+        "COMENTARIO": "Comments",
+        "ENVIAR": "Send"
+    },
+    "REPORTEENVIADO": {
+        "TITLE": "Report has been sent",
+        "BUTTON": "Back to Reports"
+    },
+    "LISTA" : {
+        "TITLE": "Total Reports",
+        "SUBTITLE": "List of all the reports made in the portal.",
+        "DESCRIPTION": "All reports done in the portal are on this list, the difference between the Reports tab is that the reports tab just includes the active reports.",
+        "HORA1": "35 minutes", 
+        "HORA2": "1 hour", 
+        "HORA3": "1.3 hours", 
+        "HORA4": "1.3 hours", 
+        "HORA5": "1.43 hours", 
+        "HORA6": "2 hours"
+    },
+    "LENGUAJE": {
+        "DESC": "Select a language"
+    },
+    "HEADERADMIN": {
+        "RA": "Reports",
+        "LISTA": "List",
+        "GRAFICA": "Graph",
+        "LOGOUT": "Logout"
+    },
+    "GRAFICAS": {
+        "TITLE":"Graphics",
+        "SUBTITLE":"First graph: types of persons that answered the report. Second graph: number of reports resolved"
+    }
+}

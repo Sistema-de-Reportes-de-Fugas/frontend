@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/list-group";
+
+.container button{
+  display: block;
+  margin: 0 auto;
+}
+
+.input-report-id{
+  @extend .form-control;
+  @extend .form-control-lg;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+button {
+  border-radius: 0;
+}
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.report-item{
+  display: flex !important;
+  width: 100% !important;
+  justify-content: space-between !important;
+}
+
+.lgi{
+  @extend .list-group-item;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  align-items: flex-start !important;
+  flex-direction: column !important;
+}
+
+.lgi-success{
+  @extend .lgi;
+  color: #155724;
+  background-color: #c3e6cb;
+}
+
+.lgi-success:hover{
+  @extend .lgi;
+  color: #155724;
+  background-color: #b1dfbb;
+}

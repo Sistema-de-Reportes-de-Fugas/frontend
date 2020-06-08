@@ -1,0 +1,121 @@
+{   
+    "HEADER" : {
+        "INICIO": "Inicio",
+        "REPORTE": "Reporte",
+        "ESTADO": "Estado",
+        "BETA": "Versión Beta"
+    
+    },
+    "HOME" : {
+        "BIENVENIDO": "¡Bienvenido!",
+        "SUBTITLE": "Sistema de reportes de fuga de agua de la Ciudad de México",
+        "MAKEREPORT": "¡Levanta un reporte!",
+        "REPORTDESC": "Muchas gracias por tu contribución con la ciudad. Si deseas realizar un reporte de fuga de agua, da clic aquí.",
+        "CHECKSTATUS": "Estado",
+        "STATUSREPORT": "Si ya hiciste un reporte y deseas saber si la fuga ya fue compuesta, da clic aquí.",
+        "THEPLATFORM": "La Plataforma",
+        "THEPLATFORMDESC": "Si deseas saber mas información de esta plataforma da clic aquí."
+    },
+
+    "REPORT": {
+        "TITLE": "Haz tu reporte de fuga",
+        "SUBTITLE": "Gracias por realizar tu reporte",
+        "DESCRIPTION": "Para realizar tu reporte necesitamos que nos proporciones tu Nombre y Apellido, Correo Electrónico, Dirección de la Fuga, una Referencia de la Dirección, tu Profesión o que hacias al ver la fuga, el Reporte y si lo deseas tambien puedes subir una imagen.",
+        "NOMBRE": "Nombre(s)",
+        "APELLIDO": "Apellido(s)",
+        "CORREO": "Correo Electrónico",
+        "CORREOPLACE": "ejemplo@mail.com",
+        "PROTECCION": "No compartiremos tu correo con ningun institución o dependencia.",
+        "DIRECCION": "Dirección de la fuga",
+        "DIRECCIONPLACE": "Escriba una dirección",
+        "REFERENCIA": "Referencia de la dirección",
+        "REFERENCIAPLACE": "Escriba una referencia (calle, avenida, etc.)",
+        "PROFESION":"¿Qué hacía cuando se encontró con la fuga?",
+        "PROFESION1":"Reportero",
+        "PROFESION2":"Agente de la SSP",
+        "PROFESION3":"Transeunte",
+        "PROFESION4":"Comerciante",
+        "PROFESION5":"Otro",
+        "WRITEREPORT": "Escriba su reporte:",
+        "IMAGEN": "Imagen",
+        "ENVIAR": "Enviar"
+    },
+    "ESTADO": {
+        "TITLE":"Estatus de Reporte",
+        "SUBTITLE":"Consulta tu reporte",
+        "DESCRIPTION": "Por favor, ingresa tu número de reporte para ver el estado en el que se encuentra tu solicitud.",
+        "SEND": "ENVIAR",
+        "REPORT": "Reporte 0000012",
+        "DAYS": "5 días",
+        "STATUS": "Fuga Reparada",
+        "CALLE": "Calle Pepito Gonzalez"
+    },
+    "ADMIN": {
+        "TITLE": "Ingresa a tu cuenta",
+        "SUBTITLE": "Bienvenido",
+        "DESCRIPTION": "Ingresa el correo electrónico y la contraseña con el que te encuentras registrado en el sistema.",
+        "CORREO": "Correo Electrónico",
+        "CONTRASENA": "Contraseña",
+        "ENVIAR": "Enviar"
+
+    },
+    "CLIENTEENVIADO" : {
+        "TITLE": "¡Tu reporte ha sido enviado!",
+        "SUBTITLE": "El número de reporte es:",
+        "INICIO": "Inicio"
+    },
+    "REPORTESACTIVOS" : {
+        "TITLE": "Reportes Activos",
+        "SUBTITLE": "Bienvenido",
+        "DESCRIPTION": "Para ingresar a cada reporte, da clic en el.",
+        "NUMERO1": "00000001",
+        "NUMERO2": "00000002",
+        "NUMERO3": "00000003",
+        "NUMERO4": "00000004",
+        "NUMERO5": "00000005",
+        "NUMERO6": "00000006",
+        "HORA1": "35 minutos", 
+        "HORA2": "1 hora", 
+        "HORA3": "1.3 horas", 
+        "HORA4": "1.3 horas", 
+        "HORA5": "1.43 horas", 
+        "HORA6": "2 horas",
+        "REPORTE": "Hola buenas tardes quiero reportar una fuga en la calle..."
+    },
+    "REPORTADMIN": {
+        "TITLE": "Reportes",
+        "SUBTITLE": "Reporte #",
+        "DESCRIPTION":"Información de Reporte:",
+        "COMENTARIO": "Comentarios",
+        "ENVIAR": "Enviar"
+    },
+    "REPORTEENVIADO": {
+        "TITLE": "El reporte ha sido enviado",
+        "BUTTON": "Regresar a Reportes"
+    },
+    "LISTA" : {
+        "TITLE": "Reportes Totales",
+        "SUBTITLE": "Lista de todos los reportes hechos en el portal.",
+        "DESCRIPTION": "En esta lista se encuentran todos los reportes hechos en el portal, a diferencia de la pestaña Reportes que contiene solo los reportes activos.",
+        "HORA1": "35 minutos", 
+        "HORA2": "1 hora", 
+        "HORA3": "1.3 horas", 
+        "HORA4": "1.3 horas", 
+        "HORA5": "1.43 horas", 
+        "HORA6": "2 horas"
+    },
+    "LENGUAJE": {
+        "DESC": "Selecciona un idioma"
+    },
+    "HEADERADMIN": {
+        "RA": "Reportes", 
+        "LISTA": "Lista",
+        "GRAFICA": "Gráficas",
+        "LOGOUT": "Cerrar Sesión"
+    },
+    "GRAFICAS": {
+        "TITLE":"Gráficas",
+        "SUBTITLE":"La primer gráfica muestra el tipo de personas que respondieron la encuesta. La segunda gráfica el numero de reportes resueltos"
+    }
+
+}
