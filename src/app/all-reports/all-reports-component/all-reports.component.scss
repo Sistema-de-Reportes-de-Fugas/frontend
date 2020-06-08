@@ -1,0 +1,8 @@
+pagination-controls{
+    text-align: center;
+}
+
+.pagination-controls ::v-deep .current,
+.btn-info{
+    background-color: #159d34 !important;
+}
