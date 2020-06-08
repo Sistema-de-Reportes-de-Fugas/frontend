@@ -28,7 +28,7 @@ export class ReporteAdminComponent implements OnInit {
       console.log('respuesta de alumno->' + this.All_reports);
     });
   }
-  
+
   onSubmit() {
     console.log("DELETE ACTIVATED")
     this.Service.deleteReportes(this.message).subscribe((data) => {
@@ -37,6 +37,5 @@ export class ReporteAdminComponent implements OnInit {
     });
   }
 
-  
 
 }

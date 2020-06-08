@@ -21,11 +21,11 @@ export class ReporteComponent implements OnInit {
       'Content-Type': 'application/json'
     })
   }
-
+  
   constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
-
+  
   registrationForm = this.fb.group({
     nombre: "",
     apellido: [''],
@@ -60,6 +60,7 @@ export class ReporteComponent implements OnInit {
   }
   updateProfesion(profesion){
     this.data.updateProfesion(profesion);
+    console.log(this.data.updateProfesion(profesion));
   }
   updateComentarios(comentarios){
     this.data.updateComentarios(comentarios);

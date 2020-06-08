@@ -7,7 +7,8 @@ export class Reporte {
         public apellido?: string,
         public correo?: string,
         public direcion?: string,
-        public referencia?: string)
+        public referencia?: string,
+        public tipoPersona?: string)
         {
     }
 }

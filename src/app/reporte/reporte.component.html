@@ -41,7 +41,7 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1">{{ "REPORT.PROFESION" | translate }}</label>
           <select class="form-control" id="exampleFormControlSelect1" name = "profesion" formControlName="tipoPersona">
-            <option *ngFor="let tipoPersona of tipoPersonas" [(value)]="text" #profesion (keyup)="updateProfesion(profesion.value)">{{tipoPersona}}</option>
+            <option *ngFor="let tipoPersona of tipoPersonas" [value]="tipoPersona" #profesion (keyup)="updateProfesion(profesion.value)">{{tipoPersona}}</option>
           </select>
         </div>
         <div class="form-group">
