@@ -28,5 +28,15 @@ export class ReporteAdminComponent implements OnInit {
       console.log('respuesta de alumno->' + this.All_reports);
     });
   }
+  
+  onSubmit() {
+    console.log("DELETE ACTIVATED")
+    this.Service.deleteReportes(this.message).subscribe((data) => {
+      this.All_reports = data;
+      console.log('respuesta de alumno->' + this.All_reports);
+    });
+  }
+
+  
 
 }
