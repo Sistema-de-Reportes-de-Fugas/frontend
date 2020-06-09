@@ -9,22 +9,41 @@
         {{ "ESTADO.DESCRIPTION" | translate }} 
       </p>       
     </div>
-    <input class="input-report-id" type="text" placeholder="ingresa aquí tu número de reporte">
+    <input class="input-report-id" type="text" #text placeholder="ingresa aquí tu número de reporte">
     <br><br>
-    <button type="button" id="button-estado" class="btn btn-success" (click)="onSubmit()">{{ "ESTADO.SEND" | translate }}</button>
+    <button type="button" id="button-estado" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="onSubmit(text)">{{ "ESTADO.SEND" | translate }}</button>
     <br><br>  
     <br>
-    <div class="container-list" id="container-list">
-      <div class="list-group">
-          <a href="#" class="lgi-success">
-            <div class="report-item">
-              <h5 class="mb-1">{{ "ESTADO.REPORT" | translate }} </h5>
-              <small>{{ "ESTADO.DAYS" | translate }} </small>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div *ngFor="let report of All_reports" class="form">
+             
+              <div class="col">
+                <label >{{ "REPORT.NOMBRE" | translate }}</label>
+                <input type="text" name="nombress" value="{{ report.nombre }}"> 
+              </div>
+              <div class="col">
+                <label >{{ "REPORT.APELLIDO" | translate }}</label>
+                <input type="text" name = "apellido" value="{{ report.apellido }}">
+              </div>
             </div>
-            <p class="mb-1">{{ "ESTADO.STATUS" | translate }}</p>
-            <small>{{ "ESTADO.CALLE" | translate }}</small>
-          </a>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" (click)="onUpdate(text)">Save changes</button>
+          </div>
         </div>
+      </div>
     </div>
     <br><br><br>
 </div>
