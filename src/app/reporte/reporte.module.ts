@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpErrorResponse, HttpHeaders, HttpClient } from '@angular/common/http';
+import { Report } from '../all-reports/report';
+import { Observable, of, throwError } from 'rxjs';
+import { map, retry, catchError, tap } from 'rxjs/operators';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 
 
 @NgModule({
@@ -10,4 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ]
 })
-export class ReporteModule { }
+export class ReporteModule { 
+
+  
+}
