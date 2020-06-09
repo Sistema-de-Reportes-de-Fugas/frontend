@@ -1,19 +1,28 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import { Report } from '../report';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, arg: any): any {
-    const resultPosts = [];
-    for(const report of value){
-      if(report.nombre.toLowerCase().indexOf(arg.toLowerCase()) > -1){
-        resultPosts.push(report);
-      };
-    };
-    return resultPosts;
+  transform(report: Report[], filterPost: string) {
+    if(!report || !filterPost){
+      return report;
+    }else {
+      console.log("report",report)
+      console.log("filterpost",filterPost)
+      return (report.filter(report => report.nombre == filterPost))
+    } 
+    
+    
+    
   }
+  
+    
+    
+    
+  
 
   
 }
