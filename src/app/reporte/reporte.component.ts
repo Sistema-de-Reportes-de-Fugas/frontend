@@ -6,6 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DataService } from '../data.service';
 import { map, catchError, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { ReporteService } from  '../reporte/service/reporte.service'
+import { Report } from '../all-reports/report';
+
 
 @Component({
   selector: 'app-reporte',
@@ -15,6 +18,17 @@ import { of } from 'rxjs';
 export class ReporteComponent implements OnInit {
   text = '';
   endpoint: 'http://localhost:8080/api/reportes';
+  All_reports: Report[];
+
+  nombre2: [];
+  nombre3: [];
+  apellido2: [];
+  comentario2: [];
+  correo2: [];
+  direccion2: [];
+  referencia2: [];
+  tipoPersona2: [];
+  identificador: any;
 
   httpOptions = {
     header: new HttpHeaders({
@@ -22,23 +36,24 @@ export class ReporteComponent implements OnInit {
     })
   }
   
-  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient) { }
+  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient, public Service: ReporteService) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
   
   registrationForm = this.fb.group({
-    nombre: "",
-    apellido: [''],
-    correo: [''],
-    direccion: [''],
+    nombre: ["", Validators.required],
+    apellido: ['', Validators.required],
+    correo: ['', Validators.required],
+    direccion: ['',Validators.required],
     referencia: [''],
     tipoPersona: [''],
-    comentario: [''],
+    comentario: ['', Validators.required],
     imagen: ['']
 
   });
 
   ngOnInit(): void {
+    
   }
 
   updateText(text){
@@ -65,6 +80,51 @@ export class ReporteComponent implements OnInit {
   updateComentarios(comentarios){
     this.data.updateComentarios(comentarios);
   }
+  getReports(id: string) {
+    this.Service.getReportes(id).subscribe((data) => {
+      this.All_reports = data
+      console.log(data);
+      this.nombre2 = data.nombre;
+      this.apellido2 = data.apellido;
+      this.comentario2 = data.comentario;
+      this.correo2 = data.correo;
+      this.direccion2 = data.direccion;
+      this.referencia2 = data.referencia;
+      this.tipoPersona2 = data.tipoPersona;
+
+      if (data.correo == ""){
+        console.log("Se murio correo")
+      }
+    });
+    
+  }
+  
+  updateReports(id: string) {
+    if(this.registrationForm.value) {
+      console.log(this.registrationForm.value);
+      const data = this.registrationForm.value;
+      console.log(data)
+      const headers= new HttpHeaders({'Content-Type':'application/json'});
+      
+      this.http.put('http://localhost:8080/api/reportes' + '/' + id, data, {headers}).subscribe(
+        res=>{
+          console.log(res);
+        },
+        err=>{
+          console.log('err:'+err);
+        }
+      );
+    }
+  }
+
+ /*
+ updateReports(id: string) {
+  const data = this.registrationForm.value
+  console.log(data)
+  this.Service.updateReportes(id).subscribe(data);
+ }*/
+
+
 
   onSubmit() {
     if(this.registrationForm.value) {
@@ -81,6 +141,29 @@ export class ReporteComponent implements OnInit {
       );
     }
   }
+  onSubmitReport(id){
+    this.identificador = id.value
 
+    if (this.identificador == ''){
+      console.log("vacio")
+      this.nombre2 = null;
+      this.apellido2 = null;
+      this.comentario2 = null;
+      this.correo2 = null;
+      this.direccion2 = null;
+      this.referencia2 = null;
+      this.tipoPersona2 = null;
+      alert("Por favor ingresa tu numero de reporte");
 
+    }else{
+      this.getReports(id.value)
+    }
+
+  
+    
+  }
+
+  onSubmitUpdate() {
+    this.updateReports(this.identificador);
+  }
 }
