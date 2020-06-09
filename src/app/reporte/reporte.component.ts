@@ -41,13 +41,13 @@ export class ReporteComponent implements OnInit {
   // userModel = new User('','','','','', '','', null);
   
   registrationForm = this.fb.group({
-    nombre: [""],
-    apellido: [''],
-    correo: [''],
-    direccion: [''],
+    nombre: ["", Validators.required],
+    apellido: ['', Validators.required],
+    correo: ['', Validators.required],
+    direccion: ['',Validators.required],
     referencia: [''],
     tipoPersona: [''],
-    comentario: [''],
+    comentario: ['', Validators.required],
     imagen: ['']
 
   });
@@ -91,6 +91,10 @@ export class ReporteComponent implements OnInit {
       this.direccion2 = data.direccion;
       this.referencia2 = data.referencia;
       this.tipoPersona2 = data.tipoPersona;
+
+      if (data.correo == ""){
+        console.log("Se murio correo")
+      }
     });
     
   }
@@ -139,7 +143,23 @@ export class ReporteComponent implements OnInit {
   }
   onSubmitReport(id){
     this.identificador = id.value
-    this.getReports(id.value)
+
+    if (this.identificador == ''){
+      console.log("vacio")
+      this.nombre2 = null;
+      this.apellido2 = null;
+      this.comentario2 = null;
+      this.correo2 = null;
+      this.direccion2 = null;
+      this.referencia2 = null;
+      this.tipoPersona2 = null;
+      alert("Por favor ingresa tu numero de reporte");
+
+    }else{
+      this.getReports(id.value)
+    }
+
+  
     
   }
 
