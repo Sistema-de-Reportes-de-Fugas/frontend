@@ -9,15 +9,17 @@
         {{ "REPORT.DESCRIPTION" | translate }} 
       </p>       
     </div>
+    
+  
     <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <hr/>
-      {{ registrationForm.value | json}}
-      <hr/>
+      
       <div class="container-form">
         <div class="form-row">
           <div class="col">
-            <label >{{ "REPORT.NOMBRE" | translate }}</label>
+            <label>{{ "REPORT.NOMBRE" | translate }}</label>
             <input type="text" class="form-control" placeholder="{{ 'REPORT.NOMBRE' | translate }}" name = "nombre" formControlName="nombre" [(value)]="text" #nombre (keyup)="updateText(nombre.value)">
+            
           </div>
           <div class="col">
             <label >{{ "REPORT.APELLIDO" | translate }}</label>
@@ -56,6 +58,75 @@
         <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active" class="btn btn-success" type="button" (click)="onSubmit()">{{ "REPORT.ENVIAR" | translate }} </button>
       </div>
       <br>
+      <hr/>
+      <div class="form-group">
+        
+        <label for="exampleFormControlInput1">¿Cuentas con un reporte y deseas editarlo? </label>
+        <p class="text-secondary">Ingresa el numero de reporte</p> 
+        <input type="text" #idReporte class="form-control" id="exampleFormControlInput1" placeholder="Numero de reporte..." >
+      </div>
+      <br>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="onSubmitReport(idReporte)">
+        Edita tu reporte
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modifica tu Reporte</h5>
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              
+            </div>
+            <div class="modal-body" *ngIf="All_reports" >
+              <!-- Modal Body--> 
+              <div class="form-row">
+                <div class="col" *ngIf="nombre2" >
+                  <label >{{ "REPORT.NOMBRE" | translate }}</label>
+                  <input  type="text" class="form-control-plaintext"  [(ngModel)]="nombre2" placeholder="{{ 'REPORT.NOMBRE' | translate }}" name = "nombre" formControlName="nombre" [(value)]="text" #nombre (keyup)="updateText(nombre.value)" readonly>   
+                </div>
+              
+              
+                <div class="col" *ngIf="apellido2">
+                  <label >{{ "REPORT.APELLIDO" | translate }}</label>
+                  <input type="text" class="form-control-plaintext"  [(ngModel)]="apellido2" placeholder="{{ 'REPORT.APELLIDO' | translate }}" name = "apellido" formControlName="apellido" [(value)]="text" #apellido (keyup)="updateApellido(apellido.value)" readonly> 
+                </div>
+              </div>
+              <div class="form-group" *ngIf="correo2">
+                <label for="exampleInputEmail1">{{ "REPORT.CORREO" | translate }}</label>
+                <input type="email" class="form-control" [(ngModel)]="correo2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'REPORT.CORREOPLACE' | translate }}" name = "email" formControlName="correo"  [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
+                <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
+              </div>
+              <div class="form-group" *ngIf="direccion2">
+                <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
+                <input type="text" class="form-control" [(ngModel)]="direccion2" id="inputAddress" placeholder="{{ 'REPORT.DIRECCIONPLACE' | translate }}" name = "direccion" formControlName="direccion" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
+              </div>
+              <div class="form-group" *ngIf="referencia2">
+                <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
+                <input type="text" class="form-control" [(ngModel)]="referencia2" id="inputAddress2" placeholder="{{ 'REPORT.REFERENCIAPLACE' | translate }}" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1">{{ "REPORT.PROFESION" | translate }}</label>
+                <select class="form-control" id="exampleFormControlSelect1" name = "profesion" formControlName="tipoPersona">
+                  <option *ngFor="let tipoPersona of tipoPersonas" [value]="tipoPersona"  #profesion (keyup)="updateProfesion(profesion.value)">{{tipoPersona}}</option>
+                </select>
+              </div>
+              
+              <div class="form-group" *ngIf="comentario2">
+                <label for="exampleFormControlTextarea1" name = "comentario">{{ "REPORT.WRITEREPORT" | translate }}</label>
+                <textarea rows="4" type="text" [(ngModel)]="comentario2" class="form-control" id="inputAddress3" placeholder="" name = "comentario" formControlName="comentario" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
+              </div>
+            
+            </div>
+            
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="onSubmitUpdate()">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
   </form>
   <br><br><br><br><br><br>
 </div>
