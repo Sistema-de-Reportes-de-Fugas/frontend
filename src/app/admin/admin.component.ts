@@ -9,14 +9,19 @@ import { AuthService } from '../services/auth.service';
 export class AdminComponent implements OnInit {
 
   loginUserData = {};
-  constructor(public fb: FormBuilder, private Auth: AuthService) { }
-
+  constructor(public fb: FormBuilder, public auth: AuthService) { }
+  
+  
+  ngOnInit(): void {
+  }
+  /*
   registrationForm = this.fb.group({
     correo: [''],
     contrasena: ['']
   });
   ngOnInit(): void {
   }
+  
   onSubmit() {
     const correo = this.registrationForm.controls.correo.value;
     const contrasena = this.registrationForm.controls.contrasena.value;
@@ -26,7 +31,7 @@ export class AdminComponent implements OnInit {
     localStorage.setItem('persona', correo );
     localStorage.setItem('contrasena', contrasena);
 
-  }
+  }*/
   // obtenerLocalStorage
 
 }
