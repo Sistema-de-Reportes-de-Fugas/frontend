@@ -1,8 +1,7 @@
-@charset "UTF-8";
-
 .form-control.ng-pristine {
   background-color: #E0E0E0;
 }
+
 .form-control.ng-dirty {
   background-color: whitesmoke;
 }
@@ -11,11 +10,11 @@
   text-align: center;
 }
 
-.col{
+.col {
   z-index: 0;
 }
 
-h2{
+h2 {
   margin-bottom: 0.5em;
 }
 
@@ -41,6 +40,9 @@ hr {
   padding-right: 30px;
   margin: 5px;
 }
-#inputAddress{
-  display:block !important;
+
+#inputAddress {
+  display: block !important;
 }
+
+/*# sourceMappingURL=reporte.component.css.map */
