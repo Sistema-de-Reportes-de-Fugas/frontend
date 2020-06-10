@@ -9,6 +9,9 @@
     <h1 class="mt-4 mb-3">{{ "HOME.BIENVENIDO" | translate }}
       <small></small>
     </h1>
+    <div *ngIf="auth.loggedIn" class="alert alert-success" role="alert">
+      Hola, te encuentras como administrador. 
+    </div>
     <h2> {{ "HOME.SUBTITLE" | translate }}</h2>
     <!-- Image Header -->
     <img @enterState class="img-fluid rounded mb-4" src="assets/images/cdmx.jpg" alt="">
