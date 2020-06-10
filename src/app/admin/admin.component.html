@@ -1,34 +1,36 @@
 <app-header-no-ribbon></app-header-no-ribbon>
 <div class="container">
   <br>
-  <div class="text-heading">
+  <div class="text-heading" *ngIf="!auth.loggedIn">
     <h1>{{ "ADMIN.TITLE" | translate }}</h1>
     <br>
     <h2>{{ "ADMIN.SUBTITLE" | translate }}</h2>
     <p class="text-secondary">{{ "ADMIN.DESCRIPTION" | translate }}</p>
+    <br><br>
   </div>
-  <!--
-  <form [formGroup]="registrationForm">
-    <div id="sign-in">
-      <div class="form-group">
-          <label for="exampleInputEmail1">{{ "ADMIN.CORREO" | translate }}</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ingresa tu correo" formControlName="correo">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1">{{ "ADMIN.CONTRASENA" | translate }}</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" formControlName="contrasena">
-      </div>
-      <button [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active"  class="btn btn-success" type="button" (click)="onSubmit()">{{ "ADMIN.ENVIAR" | translate }} </button>
+  <button class="btn btn-success" type="button"  (click)="auth.login()" *ngIf="!auth.loggedIn">Iniciar Sesión</button>
+  
+  <div class="text-heading" *ngIf="auth.loggedIn">
+    <div class="row">
+      <h1>Administrador:</h1>
     </div>
-  </form>
-  -->
+    <br>
+    <div class="row">
+      <div class="col">
+        <h5>Si deseas ingresas al sistema de seguimiento de reportes, da clic en Ingresa a Reportes</h5>
+      </div>
+      <div class = "col">
+        <button [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active" class="btn btn-success">Ingresa a Reportes</button>
+      </div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col">
+        <h5>Si deseas salir de tu cuenta, da clic en Termina la sesión</h5>
+      </div>
+      <div class="col">
+        <button class="btn btn-danger" type="button"  (click)="auth.logout()">Termina la sesión</button>
+      </div>
+    </div>
+  </div>
   
-  <button routerLinkActive="router-link-active" class="btn btn-success" type="button"  (click)="auth.login()" *ngIf="!auth.loggedIn">Iniciar Sesión</button>
-  <br><br>
-  <button class="btn btn-success" type="button" (click)="auth.logout()"*ngIf="auth.loggedIn" >Terminar Sesión</button>
-  
-
-
-  <br><br><br>
-</div>
-<br><br><br>
