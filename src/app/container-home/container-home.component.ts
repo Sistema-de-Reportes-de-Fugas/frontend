@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate, state } from '@angular/animations';
-
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-container-home',
   templateUrl: './container-home.component.html',
@@ -25,11 +25,11 @@ import { trigger, style, transition, animate, state } from '@angular/animations'
 
 export class ContainerHomeComponent implements OnInit {
   state = 'small';
-  constructor() { }
-
-
+  
+  constructor(public auth: AuthService) { }
+  
+  
   ngOnInit(): void {
-
   }
 
 
