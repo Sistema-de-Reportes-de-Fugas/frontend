@@ -7,7 +7,8 @@
     <h2>{{ "ADMIN.SUBTITLE" | translate }}</h2>
     <p class="text-secondary">{{ "ADMIN.DESCRIPTION" | translate }}</p>
   </div>
-  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <!--
+  <form [formGroup]="registrationForm">
     <div id="sign-in">
       <div class="form-group">
           <label for="exampleInputEmail1">{{ "ADMIN.CORREO" | translate }}</label>
@@ -20,6 +21,14 @@
       <button [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active"  class="btn btn-success" type="button" (click)="onSubmit()">{{ "ADMIN.ENVIAR" | translate }} </button>
     </div>
   </form>
+  -->
+  
+  <button routerLinkActive="router-link-active" class="btn btn-success" type="button"  (click)="auth.login()" *ngIf="!auth.loggedIn">Iniciar Sesión</button>
+  <br><br>
+  <button class="btn btn-success" type="button" (click)="auth.logout()"*ngIf="auth.loggedIn" >Terminar Sesión</button>
+  
+
+
   <br><br><br>
 </div>
 <br><br><br>
