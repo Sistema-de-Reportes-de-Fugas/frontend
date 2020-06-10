@@ -12,6 +12,8 @@ import { ContainerHomeComponent } from './container-home/container-home.componen
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GraficaComponent } from './grafica/grafica.component';
 import { AuthGuard } from './guards/auth.guard';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './services/interceptor.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -19,7 +21,7 @@ const routes: Routes = [
   { path: 'reporte', data: {animation: 'reporte'}, component: ReporteComponent},
   { path: 'cliente-enviado', component: ReporteClienteEnviadoComponent},
   { path: 'estado', data: {animation: 'estado'}, component: EstadoComponent},
-  { path: 'admin', data: {animation: 'admin'}, component: AdminComponent},
+  { path: 'admin', data: {animation: 'admin'}, component: AdminComponent, },
   { path: 'reportes-activos', component: ReportesActivosComponent},
   { path: 'lista-reportes', component: ListaReportesComponent},
   { path: 'reporte-admin', component: ReporteAdminComponent},
@@ -30,7 +32,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  
 })
 export class AppRoutingModule { }
 // tslint:disable-next-line:max-line-length

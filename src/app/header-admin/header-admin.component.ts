@@ -8,8 +8,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class HeaderAdminComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public auth: AuthService) { }
+  
+  
   ngOnInit(): void {
   }
 
