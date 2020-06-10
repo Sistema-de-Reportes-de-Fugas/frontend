@@ -7,7 +7,6 @@ export class User {
         public referencia: string,
         public tipoPersona: string,
         public comentario: string,
-        public imagen: HTMLImageElement
     ){}
 
 }
