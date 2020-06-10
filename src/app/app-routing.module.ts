@@ -11,6 +11,7 @@ import { ReporteEnviadoComponent } from './reporte-enviado/reporte-enviado.compo
 import { ContainerHomeComponent } from './container-home/container-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GraficaComponent } from './grafica/grafica.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
