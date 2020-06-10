@@ -48,7 +48,7 @@ export class ReporteComponent implements OnInit {
     referencia: [''],
     tipoPersona: [''],
     comentario: ['', Validators.required],
-    imagen: ['']
+    imagen: [''],
 
   });
 
@@ -82,7 +82,9 @@ export class ReporteComponent implements OnInit {
   }
   getReports(id: string) {
     this.Service.getReportes(id).subscribe((data) => {
+      
       this.All_reports = data
+      
       console.log(data);
       this.nombre2 = data.nombre;
       this.apellido2 = data.apellido;
@@ -92,10 +94,12 @@ export class ReporteComponent implements OnInit {
       this.referencia2 = data.referencia;
       this.tipoPersona2 = data.tipoPersona;
 
-      if (data.correo == ""){
+      if (data == Error){
         console.log("Se murio correo")
       }
     });
+
+    
     
   }
   
@@ -143,27 +147,42 @@ export class ReporteComponent implements OnInit {
   }
   onSubmitReport(id){
     this.identificador = id.value
-
-    if (this.identificador == ''){
-      console.log("vacio")
-      this.nombre2 = null;
-      this.apellido2 = null;
-      this.comentario2 = null;
-      this.correo2 = null;
-      this.direccion2 = null;
-      this.referencia2 = null;
-      this.tipoPersona2 = null;
+    if (this.identificador == "") {
       alert("Por favor ingresa tu numero de reporte");
-
-    }else{
+    }else {
       this.getReports(id.value)
     }
 
-  
-    
   }
 
   onSubmitUpdate() {
-    this.updateReports(this.identificador);
+    
+    if(this.identificador != "") {
+      this.updateReports(this.identificador);
+      
+    }else {
+      this.registrationForm = this.fb.group({
+        nombre: ["", Validators.required],
+        apellido: ['', Validators.required],
+        correo: ['', Validators.required],
+        direccion: ['',Validators.required],
+        referencia: [''],
+        tipoPersona: [''],
+        comentario: ['', Validators.required],
+        
+    
+      });
+      
+    }
+    
+    
+    
+    
+  }
+  onSubmitClose() {
+    
+    this.identificador = "";
+    
+
   }
 }
