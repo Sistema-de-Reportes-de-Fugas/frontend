@@ -20,9 +20,12 @@
         "SUBTITLE": "Thanks for making your report",
         "DESCRIPTION": "To make your report, we need you to provide us with your first and last name, email, address of the leak, a reference to the address, your profession or what you did when you saw the leak, the report, and if you wish, you can also upload an image.",
         "NOMBRE": "Name(s)",
+        "NO_NOMBRE": "Write your name",
         "APELLIDO": "Last name(s)",
+        "NO_APELLIDO": "Write your last name",
         "CORREO": "Email",
         "CORREOPLACE": "example@mail.com",
+        "NO_CORREO": "Write your email address",
         "PROTECCION": "We will not share your email with any institution or dependency",
         "MAP": "Use this map to help you locate the address of the leak.",
         "DIRECCION": "Leak address",
@@ -37,7 +40,10 @@
         "PROFESION5":"Other",
         "WRITEREPORT": "Write your report:",
         "IMAGEN": "Image*",
-        "ENVIAR": "Send"
+        "OPT": "Optional*",
+        "ENVIAR": "Send",
+        "MODIFICAR?": "Do you want to modify a report?",
+        "MODIFICAR": "Modify your report"
     },
     "ESTADO": {
         "TITLE":"Report Status",
@@ -56,7 +62,6 @@
         "CORREO": "Email",
         "CONTRASENA": "Password",
         "ENVIAR": "Send"
-
     },
     "CLIENTEENVIADO" : {
         "TITLE": "Your report has been sent!",

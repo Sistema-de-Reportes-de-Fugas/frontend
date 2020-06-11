@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
 import { GraficaService } from './services/grafica.service';
 import { Reporte } from './models/reporte';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-grafica',
@@ -22,25 +23,32 @@ export class GraficaComponent implements OnInit {
   len4: number;
   len5: number;
   lentotal: number;
+  professions: string[];
+  bar_title: string;
+  doughnut_solved_title: string;
+
+  prof_es: ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
+  prof_en: ['Reporter', 'SSP Agent', 'Passerby', 'Merchant', 'Other'];
   ngOnInit() {
 
-    this.getReports(); 
+    this.getReports();
+    this.updateLang();
 
     this.chart = new Chart('bar', {
       type: 'bar',
       options: {
+        legend: {display: false},
         responsive: true,
         title: {
           display: true,
-          text: 'Tipos de Personas'
+          text: this.bar_title
         },
       },
-      data: {
-        labels: ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'],
+      data: {    
+        labels: this.professions,
         datasets: [
           {
             type: 'bar',
-            label: 'Reportero, Agente, Transeunte, Comerciante, Otro',
             data: [this.len, this.len5],
             backgroundColor: ['rgba(46,89,33,0.8)', 'rgba(145,145,145,0.8)', 'rgba(46,89,33,0.8)', 'rgba(145,145,145,0.8)', 'rgba(46,89,33,0.8)'],
             borderColor: 'rgba(46,89,33,0.8)',
@@ -51,7 +59,7 @@ export class GraficaComponent implements OnInit {
     });
     const options = {
       // aspectRatio: 1,
-      // legend: false,
+      // legend: {display: false},
       tooltips: false,
 
       elements: {
@@ -76,13 +84,13 @@ export class GraficaComponent implements OnInit {
         }
       }
     };
-    this.doughnut =  new Chart('doughnut', {
+    this.doughnut =  new Chart('doughnut_solved', {
       type: 'doughnut',
       options: {
         responsive: true,
         title: {
           display: true,
-          text: 'Reportes Resueltos'
+          text: this.doughnut_solved_title
         }, legend: {
 
           position: 'top',
@@ -97,17 +105,12 @@ export class GraficaComponent implements OnInit {
       },
       data: {
         datasets: [{
-
           data: [this.lentotal, 10],
           backgroundColor: ['rgba(46,89,33,0.8)', 'rgba(145,145,145,0.8)'],
           label: 'reportesResueltos'
-
         }],
-
         labels: ['Reportes Realizados']
-
       }
-
     });
   }
   
@@ -118,7 +121,7 @@ export class GraficaComponent implements OnInit {
       console.log('respuesta de alumno->' + this.All_reports);
 
       this.len = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Reportero";
+        return (item.tipoPersona == "Reportero");
       }).length;
       console.log(this.len)
     
@@ -152,7 +155,6 @@ export class GraficaComponent implements OnInit {
       this.chart.chart.update()
       this.doughnut.chart.update()
       
-      
     
     });
 
@@ -166,8 +168,6 @@ export class GraficaComponent implements OnInit {
     this.chart.update(); // This re-renders the canvas element.
   }
   
-  
-
 
   addData(chart, label, data) {
     chart.data.labels.push(label);
@@ -190,5 +190,20 @@ updateChartData(chart, data, dataSetIndex){
   chart.update();
 }
 
-constructor(public Service: GraficaService) { }
+updateLang()
+{
+  if(this.translate.currentLang=='es') {
+    this.professions = this.prof_es;
+    this.bar_title = 'Tipos de Personas';
+    this.doughnut_solved_title = 'Reportes Resueltos';
+  }
+  else
+  {
+    this.professions = this.prof_en;
+    this.bar_title = 'Types of Persons';
+    this.doughnut_solved_title = 'Solved Reports';
+  }
+}
+
+constructor(public Service: GraficaService, public translate: TranslateService) { }
 }

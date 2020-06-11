@@ -10,7 +10,6 @@ import { ReporteService } from  '../reporte/service/reporte.service'
 import { Report } from '../all-reports/report';
 import { TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
@@ -30,6 +29,7 @@ export class ReporteComponent implements OnInit {
   referencia2: [];
   tipoPersona2: [];
   identificador: any;
+  lenguaje: ['']
 
   httpOptions = {
     header: new HttpHeaders({
@@ -54,6 +54,7 @@ export class ReporteComponent implements OnInit {
     tipoPersona: [''],
     comentario: ['', Validators.required],
     imagen: [''],
+    leng: ['']
   });
 
   ngOnInit(): void {
@@ -85,6 +86,11 @@ export class ReporteComponent implements OnInit {
   updateComentarios(comentarios){
     this.data.updateComentarios(comentarios);
   }
+  updateLenguaje(leng)
+  {
+    this.registrationForm.value.leng=leng;
+    this.data.updateLenguaje(leng);
+  }
   getReports(id: string) {
     this.Service.getReportes(id).subscribe((data) => {
       
@@ -98,6 +104,7 @@ export class ReporteComponent implements OnInit {
       this.direccion2 = data.direccion;
       this.referencia2 = data.referencia;
       this.tipoPersona2 = data.tipoPersona;
+      this.lenguaje = data.lang;
 
       if (data == Error){
         console.log("Se murio correo")
@@ -108,13 +115,11 @@ export class ReporteComponent implements OnInit {
   
   updateReports(id: string) {
     if(this.registrationForm.value) {
+      this.updateLenguaje(this.translate.currentLang);
       console.log(this.registrationForm.value);
       const data = this.registrationForm.value;
-      data.
-      console.log(data);
+      console.log("data sent:",data);
       const headers= new HttpHeaders({'Content-Type':'application/json'});
-      console.log(this.translate.currentLang);
-      const lang = this.translate.currentLang;
       this.http.put('http://localhost:8080/api/reportes' + '/' + id, data, {headers}).subscribe(
         res=>{
           console.log(res);
@@ -134,11 +139,12 @@ export class ReporteComponent implements OnInit {
  }*/
 
 
-
   onSubmit() {
     if(this.registrationForm.value) {
+      this.updateLenguaje(this.translate.currentLang);
       console.log(this.registrationForm.value);
       const data = this.registrationForm.value;
+      console.log("data sent:",data);
       const headers= new HttpHeaders({'Content-Type':'application/json'});
       this.http.post("http://localhost:8080/api/reportes",data, {headers}).subscribe(
         res=>{
@@ -174,20 +180,16 @@ export class ReporteComponent implements OnInit {
         referencia: [''],
         tipoPersona: [''],
         comentario: ['', Validators.required],
-        
-    
+        lang: ['']
       });
       
     }
-    
-    
     
     
   }
   onSubmitClose() {
     
     this.identificador = "";
-    
 
   }
 }

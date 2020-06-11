@@ -19,12 +19,12 @@
           <div class="col">
             <label>{{ "REPORT.NOMBRE" | translate }}</label>
             <input type="text" class="form-control" placeholder="{{ 'REPORT.NOMBRE' | translate }}" name = "nombre" formControlName="nombre" [ngClass]="{'is-invalid': registrationForm.get('nombre').touched && registrationForm.get('nombre').invalid}" [(value)]="text" #nombre (keyup)="updateText(nombre.value)">
-            <div class="invalid-feedback"><div>Ingresa tu nombre</div></div>
+            <div class="invalid-feedback"><div>{{ "REPORT.NO_NOMBRE" | translate }}</div></div>
           </div>
           <div class="col">
             <label >{{ "REPORT.APELLIDO" | translate }}</label>
             <input type="text" class="form-control" placeholder="{{ 'REPORT.APELLIDO' | translate }}" name = "apellido" formControlName="apellido"  [ngClass]="{'is-invalid': registrationForm.get('apellido').touched && registrationForm.get('apellido').invalid}"[(value)]="text" #apellido (keyup)="updateApellido(apellido.value)">
-            <div class="invalid-feedback"><div>Ingresa tu apellido</div></div>
+            <div class="invalid-feedback"><div>{{ "REPORT.NO_APELLIDO" | translate }}</div></div>
           </div>
         </div>
         <br>
@@ -33,7 +33,7 @@
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'REPORT.CORREOPLACE' | translate }}" name = "email" formControlName="correo" [ngClass]="{'is-invalid': registrationForm.get('correo').touched && registrationForm.get('correo').invalid}" [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
           <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
           <div *ngIf="{'is-invalid': registrationForm.get('correo').touched && registrationForm.get('correo').invalid}" class="invalid-feedback">
-            <div>Ingresa tu correo</div>
+            <div>{{ 'REPORT.NO_CORREO' | translate }}</div>
           </div>
         </div>
         <div class="g_map">
@@ -43,7 +43,7 @@
         <div class="form-group">
           <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
           <input type="text" class="form-control" id="inputAddress" placeholder="{{ 'REPORT.DIRECCIONPLACE' | translate }}" name = "direccion" formControlName="direccion"  [ngClass]="{'is-invalid': registrationForm.get('direccion').touched && registrationForm.get('direccion').invalid}" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
-          <div class="invalid-feedback"><div>Ingresa tu dirección</div></div>
+          <div class="invalid-feedback"><div>{{ 'REPORT.DIRECCIONPLACE' | translate }}</div></div>
         </div>
         <div class="form-group">
           <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
@@ -58,12 +58,12 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea1" name = "comentario">{{ "REPORT.WRITEREPORT" | translate }}</label>
           <textarea rows="4" type="text" class="form-control" id="inputAddress3" placeholder="" name = "comentario" formControlName="comentario" [ngClass]="{'is-invalid': registrationForm.get('comentario').touched && registrationForm.get('comentario').invalid}" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
-          <div class="invalid-feedback"><div>Ingresa tu comentario</div></div>
+          <div class="invalid-feedback"><div>{{ "REPORT.WRITEREPORT" | translate }}</div></div>
         </div>
         <div class="form-group">
           <label for="exampleFormControlFile1" name = "imagen">{{ "REPORT.IMAGEN" | translate }}</label>
           <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" formControlName="imagen">
-          <small>Opcional*</small>
+          <small>{{ "REPORT.OPT" | translate }}</small>
         </div>
         <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active" class="btn btn-success" type="button" (click)="onSubmit()" [disabled]="!registrationForm.valid">{{ "REPORT.ENVIAR" | translate }} </button>
         <div *ngIf="!registrationForm.valid">
@@ -73,13 +73,13 @@
       <br>
       <hr/>
       <div class="form-group">
-        <label for="exampleFormControlInput1">¿Cuentas con un reporte y deseas editarlo? </label>
+        <label for="exampleFormControlInput1">{{ "REPORT.MODIFICAR?" | translate}}</label>
         <p class="text-secondary">Ingresa el numero de reporte</p> 
         <input type="text" #idReporte class="form-control" id="exampleFormControlInput1" placeholder="Numero de reporte..." >
       </div>
       <br>
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="onSubmitReport(idReporte)">
-        Edita tu reporte
+        {{ "REPORT.MODIFICAR" | translate}}
       </button>
       
       <!-- Modal -->
