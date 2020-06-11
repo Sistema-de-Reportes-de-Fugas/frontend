@@ -1,11 +1,11 @@
-# Proyecto de la Clase de Desarrollo de Aplicaciones Web (Entrega 2do. Parcial)
+# Proyecto de la Clase de Desarrollo de Aplicaciones Web
 Profesor: Juan Velez Ballesteros
 
 Andrés Campos Tams A01024385
 
 Jorge de la Vega A01650285
 
-## Reporte de Sistema de Aguas de la Ciudad de México
+## Frontend | Reporte de Sistema de Aguas de la Ciudad de México
 
 Este proyecto tiene como proposito hacer una aplicación para reportar fugas de agua en la Ciudad de México. 
 
