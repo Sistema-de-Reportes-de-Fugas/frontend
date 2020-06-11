@@ -10,13 +10,14 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 })
 export class ReporteService {
 
-  eporte: Report[];
+  reporte: Report[];
   
   private messageSource = new BehaviorSubject<string>("default message");
   currentMessage = this.messageSource.asObservable();
 
   getReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
+    console.log(id)
     var headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
@@ -36,6 +37,7 @@ export class ReporteService {
 
   updateReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
+    
     var headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',

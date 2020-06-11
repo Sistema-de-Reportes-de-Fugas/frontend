@@ -3,6 +3,8 @@ import { trigger, style, transition, animate, state } from '@angular/animations'
 import { EstadoService } from './services/estado.service';
 import { Reporte } from './models/reporte';
 import { FormBuilder } from '@angular/forms';
+import { AllReportsService } from '../all-reports/services/all-reports.service';
+
 @Component({
   selector: 'app-estado',
   templateUrl: './estado.component.html',
@@ -25,54 +27,38 @@ import { FormBuilder } from '@angular/forms';
 
 
 export class EstadoComponent implements OnInit {
-  All_reports: Reporte[];
-  updateReport: Reporte[] = [];
-  id: any;
-  @Input() nombre: string; 
-  apellido: string;
-
   
+  id: string;
+  nombre: string; 
+  apellido: string;
+  All_reports: Reporte[];
+  message: string;
+  All_perro: Reporte[];
+  identificador: any;
+  
+  constructor(public Service: EstadoService, public fb: FormBuilder, public servicio: AllReportsService) { }
 
-
-  constructor(public Service: EstadoService, public fb: FormBuilder) { }
   ngOnInit(): void {
-
-  }
-
-  onEmpCreate(){
-    //console.log(this.name,this.empoloyeeID);
-    console.log("nombre", this.nombre)
-    console.log("hola")
-    let customObj = new Reporte();
-    customObj.nombre = "Enrique Ponce";
-    this.updateReport.push(customObj);
-    console.log(this.updateReport)
     
   }
-
+  
   getReports(id: string) {
     this.Service.getReportes(id).subscribe((data) => {
       this.All_reports = data;
+      console.log(this.All_perro)
       console.log('respuesta de alumno->' + this.All_reports);
     });
   }
-  updateReports(id: string) {
-    console.log("nombre", this.nombre)
-    this.Service.updateReportes(id).subscribe((data) => {
-      this.updateReport = data;
-    });
-
-  }
   
-  onSubmit(text) {
-    console.log(text.value);
-    this.id = text.value
-    this.getReports(text.value);
-  }
-
-  onUpdate(text) {
-    this.onEmpCreate();
-    this.updateReports(this.id);
+  onSubmit(id) {
+    this.identificador = id.value
+    if (this.identificador == "") {
+      alert("Por favor ingresa tu numero de reporte");
+      this.All_reports = [];
+    }else {
+      this.getReports(id.value)
+      this.All_reports = [];
+    }
   }
 
 }
