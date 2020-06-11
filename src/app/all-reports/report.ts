@@ -5,7 +5,9 @@ export class Report {
       public numeroReporte?: Number,
       public comentario?: string,
       public nombre?: string,
-      public apellido?: string,)
+      public apellido?: string,
+      public comentarioAdmin?: string,
+      public notificado?: string)
       {
     }
 
