@@ -6,7 +6,12 @@
     
     <div class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">Reporte #: {{report._id}}</h5>
-        <small>{{i+1}}</small>
+        <small>
+          <span class="badge badge-pill badge-secondary" *ngIf="!report.comentarioAdmin">Por revisar</span>
+          <span class="badge badge-pill badge-danger" *ngIf="report.comentarioAdmin">Revisado</span>
+          {{i+1}}
+        </small>
+        
     </div>
       <p class="mb-1">Comentario: {{report.comentario}}</p>
       <small class="text-muted">Nombre: {{report.nombre}} {{report.apellido}}</small>
