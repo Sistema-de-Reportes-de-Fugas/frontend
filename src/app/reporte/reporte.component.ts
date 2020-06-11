@@ -10,7 +10,6 @@ import { ReporteService } from  '../reporte/service/reporte.service'
 import { Report } from '../all-reports/report';
 import { TranslateService } from '@ngx-translate/core';
 
-
 @Component({
   selector: 'app-reporte',
   templateUrl: './reporte.component.html',
@@ -37,11 +36,7 @@ export class ReporteComponent implements OnInit {
     })
   }
   
-  constructor(public fb: FormBuilder, 
-    private data: DataService, 
-    private http: HttpClient, 
-    public Service: ReporteService,
-    public translate: TranslateService) { }
+  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient, public Service: ReporteService, public translate: TranslateService) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
   
@@ -53,15 +48,14 @@ export class ReporteComponent implements OnInit {
     referencia: [''],
     tipoPersona: [''],
     comentario: ['', Validators.required],
-    comentarioAdmin: [''],
     imagen: [''],
+
   });
 
   ngOnInit(): void {
     
   }
 
-  // This updates Name
   updateText(text){
     this.data.updateData(text);
     console.log("data shidori: " + this.data.updateData(text));
@@ -103,7 +97,9 @@ export class ReporteComponent implements OnInit {
       if (data == Error){
         console.log("Se murio correo")
       }
-    });    
+    });
+
+    
     
   }
   
@@ -111,11 +107,10 @@ export class ReporteComponent implements OnInit {
     if(this.registrationForm.value) {
       console.log(this.registrationForm.value);
       const data = this.registrationForm.value;
-      data.
-      console.log(data);
+      console.log(data)
       const headers= new HttpHeaders({'Content-Type':'application/json'});
       console.log(this.translate.currentLang);
-      const lang = this.translate.currentLang;
+      const lang = this.translate.currentLang; 
       this.http.put('http://localhost:8080/api/reportes' + '/' + id, data, {headers}).subscribe(
         res=>{
           console.log(res);
@@ -133,6 +128,8 @@ export class ReporteComponent implements OnInit {
   console.log(data)
   this.Service.updateReportes(id).subscribe(data);
  }*/
+
+
 
   onSubmit() {
     if(this.registrationForm.value) {
@@ -173,8 +170,6 @@ export class ReporteComponent implements OnInit {
         referencia: [''],
         tipoPersona: [''],
         comentario: ['', Validators.required],
-        comentarioAdmin: [''],
-        
         
     
       });
