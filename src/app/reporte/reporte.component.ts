@@ -48,6 +48,7 @@ export class ReporteComponent implements OnInit {
     referencia: [''],
     tipoPersona: [''],
     comentario: ['', Validators.required],
+    comentarioAdmin: [''],
     imagen: [''],
 
   });
@@ -169,6 +170,8 @@ export class ReporteComponent implements OnInit {
         referencia: [''],
         tipoPersona: [''],
         comentario: ['', Validators.required],
+        comentarioAdmin: [''],
+        
         
     
       });

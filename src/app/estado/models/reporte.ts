@@ -8,7 +8,10 @@ export class Reporte {
         public correo?: string,
         public direcion?: string,
         public referencia?: string,
-        public tipoPersona?: string)
+        public tipoPersona?: string,
+        public comentarioAdmin?: string,
+        public notificado?: string
+        )
         {
     }
 }
