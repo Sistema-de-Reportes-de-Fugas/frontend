@@ -12,6 +12,7 @@ export class EstadoService {
   reporte: Reporte[]
 
   getReportes(id: string): Observable<any> {
+    console.log(id)
     console.log('estoy en el getALumnos');
     var headerDict = {
       'Content-Type': 'application/json',
@@ -26,11 +27,11 @@ export class EstadoService {
     return this.http.get('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
     //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
     //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edeeaf420f9a2324e58c8c3');
+    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
     
   }
 
-  deleteReportes(): Observable<any> {
+  deleteReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
     var headerDict = {
       'Content-Type': 'application/json',
@@ -42,37 +43,11 @@ export class EstadoService {
       headers: new HttpHeaders(headerDict),
     };
 
-    //return this.http.delete('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
-    return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-    
-  }
-
-  updateReportes(id: string): Observable<any> {
-    console.log('estoy en el getALumnos');
-    var headerDict = {
-      'Content-Type': 'application/json',
-      Accept: '*/*',
-      'Access-Control-Allow-Origin': '*',
-    };
-
-    const requestOptions = {
-      headers: new HttpHeaders(headerDict),
-    };
-
-    return this.http.put('http://localhost:8080/api/reportes' + '/' + id, requestOptions);
+    return this.http.delete('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
     //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
     //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
     //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-
     
-    
-  }
-
-
-  getId(_id) {
-    return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
   }
   
   private extractData(res: Response) {
@@ -88,7 +63,7 @@ export class EstadoService {
       errorMessage = `Error: ${error.error.message}`;
     } else {
       // Server-side errors
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}\nPor favor ingresa un id de reporte válido.`;
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
