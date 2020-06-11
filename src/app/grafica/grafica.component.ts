@@ -34,6 +34,16 @@ export class GraficaComponent implements OnInit {
           display: true,
           text: 'Tipos de Personas'
         },
+        scales: {
+          yAxes: [{
+              display: true,
+              ticks: {
+                     // minimum will be 0, unless there is a lower value.
+                  // OR //
+                  beginAtZero: true   // minimum value will be 0.
+              }
+          }]
+        }
       },
       data: {
         labels: ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'],
@@ -184,6 +194,7 @@ removeData(chart) {
     });
     chart.update();
 }
+
 
 updateChartData(chart, data, dataSetIndex){
   chart.data.datasets[dataSetIndex].data = data;
