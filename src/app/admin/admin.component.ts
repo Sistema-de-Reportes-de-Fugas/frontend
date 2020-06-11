@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service';
+import { Auth0Client } from '@auth0/auth0-spa-js';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -11,9 +12,13 @@ export class AdminComponent implements OnInit {
   loginUserData = {};
   constructor(public fb: FormBuilder, public auth: AuthService) { }
   
-  
+  user: any;
+
   ngOnInit(): void {
+
+    
   }
+  
   /*
   registrationForm = this.fb.group({
     correo: [''],
@@ -33,5 +38,7 @@ export class AdminComponent implements OnInit {
 
   }*/
   // obtenerLocalStorage
+
+  
 
 }

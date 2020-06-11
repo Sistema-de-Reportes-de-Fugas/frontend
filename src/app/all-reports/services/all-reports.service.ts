@@ -27,7 +27,7 @@ export class AllReportsService {
       headers: new HttpHeaders(headerDict),
     };
 
-    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    return this.http.get('http://localhost:8080/api/reportes/', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
   }
 
   private extractData(res: Response) {

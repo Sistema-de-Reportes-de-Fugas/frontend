@@ -30,6 +30,8 @@
     "angular-storage": "0.0.15",
     "animate.css": "^4.0.0",
     "auth0-angular": "^4.2.7",
+    "auth0-js": "^9.13.2",
+    "auth0-lock": "^11.24.2",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
     "jquery": "^3.5.1",

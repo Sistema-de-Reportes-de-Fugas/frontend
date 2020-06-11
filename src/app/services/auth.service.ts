@@ -4,6 +4,8 @@ import Auth0Client from '@auth0/auth0-spa-js/dist/typings/Auth0Client';
 import { from, of, Observable, BehaviorSubject, combineLatest, throwError } from 'rxjs';
 import { tap, catchError, concatMap, shareReplay } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import Auth0Lock from 'auth0-lock';
+import * as auth0 from 'auth0-js';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +18,21 @@ export class AuthService {
       client_id: "zwHrNBwdiwvYoBdvRMkO9llQDhituGCG",
       redirect_uri: 'http://localhost:4200/reportes-activos',
       audience: 'http://localhost:8080/api',
+      scope: "aver",
+      responseType: 'token access_token',
+      
     })
   ) as Observable<Auth0Client>).pipe(
     shareReplay(1), // Every subscription receives the same shared value
     catchError(err => throwError(err))
+    
   );
+ 
+  expiresAt: number;
+  userProfile: any;
+  accessToken: string;
+  authenticated: boolean;
+
   // Define observables for SDK methods that return promises by default
   // For each Auth0 SDK method, first ensure the client instance is ready
   // concatMap: Using the client instance, call SDK method; SDK returns a promise
@@ -28,6 +40,7 @@ export class AuthService {
   isAuthenticated$ = this.auth0Client$.pipe(
     concatMap((client: Auth0Client) => from(client.isAuthenticated())),
     tap(res => this.loggedIn = res)
+
   );
   handleRedirectCallback$ = this.auth0Client$.pipe(
     concatMap((client: Auth0Client) => from(client.handleRedirectCallback()))
@@ -44,6 +57,7 @@ export class AuthService {
     this.localAuthSetup();
     // Handle redirect from Auth0 login
     this.handleAuthCallback();
+    
   }
 
   // When calling, options can be passed if desired
@@ -54,12 +68,8 @@ export class AuthService {
       tap(user => this.userProfileSubject$.next(user))
     );
   }
-  getTokenSilently$(options?): Observable<string> {
-    return this.auth0Client$.pipe(
-      concatMap((client: Auth0Client) => from(client.getTokenSilently(options)))
-    );
-  }
-
+  
+  
   private localAuthSetup() {
     // This should only be called on app initialization
     // Set up local authentication streams
@@ -68,6 +78,7 @@ export class AuthService {
         if (loggedIn) {
           // If authenticated, get user and set in app
           // NOTE: you could pass options here if needed
+          console.log(this.getUser$());
           return this.getUser$();
         }
         // If not authenticated, return stream that emits 'false'
@@ -89,6 +100,8 @@ export class AuthService {
       });
     });
   }
+  
+
 
   private handleAuthCallback() {
     // Call when app reloads after user logs in with Auth0
@@ -118,15 +131,24 @@ export class AuthService {
     }
   }
 
+  getTokenSilently$(options?): Observable<string> {
+    return this.auth0Client$.pipe(
+      concatMap((client: Auth0Client) => from(client.getTokenSilently(options)))
+    );
+  }
+
   logout() {
     // Ensure Auth0 client instance exists
     this.auth0Client$.subscribe((client: Auth0Client) => {
       // Call method to log out
       client.logout({
         client_id: "zwHrNBwdiwvYoBdvRMkO9llQDhituGCG",
-        returnTo: `${window.location.origin}`
+        returnTo: 'http://localhost:4200'
       });
     });
   }
 
 }
+
+
+

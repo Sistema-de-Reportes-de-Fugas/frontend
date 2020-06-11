@@ -116,7 +116,7 @@ export class ReporteAdminComponent implements OnInit {
       const data = this.registrationForm.value;
       const headers= new HttpHeaders({'Content-Type':'application/json'});
 
-      this.http.put('http://localhost:8080/api/reportes' + '/' + this.message, data, {headers}).subscribe(
+      this.http.put('http://localhost:8080/api/reportes/admin' + '/' + this.message, data, {headers}).subscribe(
       res=>{
         console.log(res);
       },

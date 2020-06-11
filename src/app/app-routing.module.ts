@@ -33,6 +33,11 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+
+  //providers: [
+  //  { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+  //],
+  
   
 })
 export class AppRoutingModule { }

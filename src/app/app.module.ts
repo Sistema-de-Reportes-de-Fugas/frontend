@@ -25,6 +25,11 @@ import { RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './all-reports/pipes/filter.pipe';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
+
+import { AuthGuard } from './guards/auth.guard';
+
 
 
 export function HttpLoaderFactory(http: HttpClient) {
