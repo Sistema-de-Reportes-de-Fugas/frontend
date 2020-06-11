@@ -134,8 +134,6 @@ export class ReporteComponent implements OnInit {
   this.Service.updateReportes(id).subscribe(data);
  }*/
 
-
-
   onSubmit() {
     if(this.registrationForm.value) {
       console.log(this.registrationForm.value);
