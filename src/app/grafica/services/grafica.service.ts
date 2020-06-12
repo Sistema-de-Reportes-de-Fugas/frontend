@@ -8,9 +8,7 @@ import { map, retry, catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class GraficaService {
-
-  reporte: Reporte[];
-  
+  reporte: Reporte[];  
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
     var headerDict = {
@@ -22,8 +20,8 @@ export class GraficaService {
     const requestOptions = {
       headers: new HttpHeaders(headerDict),
     };
-
-    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    const address = 'http://localhost:8080/api/reportes';
+    return this.http.get(address, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
   }
 
 
@@ -45,7 +43,6 @@ export class GraficaService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-  
   
   //getReports() {
    // return REPORTS;

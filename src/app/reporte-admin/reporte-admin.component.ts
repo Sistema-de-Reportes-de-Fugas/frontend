@@ -13,7 +13,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   styleUrls: ['./reporte-admin.component.scss']
 })
 export class ReporteAdminComponent implements OnInit {
-  All_reports: Reporte[];
+
+  address: 'http://localhost:8080/api/reportes';
+
+  allReports: Reporte[];
   message: string;
   comentarioAdmin: string;
   nombre2: Reporte[];
@@ -25,8 +28,8 @@ export class ReporteAdminComponent implements OnInit {
   referencia2: Reporte[];
   tipoPersona2: Reporte[];
   notificado2: Reporte[];
-  id:[];
-  someInput: string; 
+  id: [];
+  someInput: string;
   comentarioAdmin2: Reporte[];
   constructor(public Service: ReporteService, public servicio: AllReportsService, public fb: FormBuilder, private http: HttpClient){}
   
@@ -47,16 +50,16 @@ export class ReporteAdminComponent implements OnInit {
 
   ngOnInit(): void {
     this.servicio.currentMessage.subscribe(message => this.message = message);
-    console.log(this.message)
+    console.log(this.message);
     this.getReports(this.message);
   }
 
   getReports(id: string) {
     this.Service.getReportes(this.message).subscribe((data) => {
-      this.All_reports = data;
-      console.log('respuesta de alumno->' + this.All_reports);
-      console.log(this.All_reports)
-      for (var report of data) {
+      this.allReports = data;
+      console.log('respuesta de alumno->' + this.allReports);
+      console.log(this.allReports);
+      for (const report of data) {
         console.log(report);
         this.nombre2 = report.nombre;
         this.apellido2 = report.apellido;
@@ -76,25 +79,21 @@ export class ReporteAdminComponent implements OnInit {
         referencia: this.referencia2 ,
         tipoPersona: this.tipoPersona2,
         comentario: this.comentario2 ,
-        comentarioAdmin: this.comentarioAdmin2,
-       
+        comentarioAdmin: this.comentarioAdmin2,       
       });
-
-
-    });
-    
+    });    
   }
 
   onSubmit() {
-    console.log("DELETE ACTIVATED")
+    console.log('DELETE ACTIVATED');
     this.Service.deleteReportes(this.message).subscribe((data) => {
-      this.All_reports = data;
-      console.log('respuesta de alumno->' + this.All_reports);
+      this.allReports = data;
+      console.log('respuesta de alumno->' + this.allReports);
     });
   }
 
   onSubmitAdmin(comentarioAdmin) {
-    console.log(comentarioAdmin.value)
+    console.log(comentarioAdmin.value);
     
     this.comentarioAdmin2 = comentarioAdmin.value;
     if (this.comentarioAdmin2) {
@@ -110,31 +109,28 @@ export class ReporteAdminComponent implements OnInit {
         comentarioAdmin: comentarioAdmin.value,
       });
 
-      console.log(this.registrationForm.value)
-      console.log(this.message)
+      console.log(this.registrationForm.value);
+      console.log(this.message);
       
       const data = this.registrationForm.value;
       const headers= new HttpHeaders({'Content-Type':'application/json'});
 
-      this.http.put('http://localhost:8080/api/reportes' + '/' + this.message, data, {headers}).subscribe(
-      res=>{
+      this.http.put(this.address + '/' + this.message, data, {headers}).subscribe(
+      res => {
         console.log(res);
       },
-      err=>{
-        console.log('err:'+err);
+      err => {
+        console.log('err:' + err);
       }
       
     );
 
     }else {
-      console.log("no existe")
-    }
-    
+      console.log('no existe');
+    }    
   }
-
   onSubmitBack() {
-    console.log("Regresó")
+    console.log('Regresó');
   }
-  
 
 }

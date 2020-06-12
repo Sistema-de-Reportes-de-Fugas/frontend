@@ -10,11 +10,11 @@ import { FilterPipe } from '../pipes/filter.pipe';
   styleUrls: ['./all-reports.component.scss']
 })
 export class AllReportsComponent{
-  All_reports: Report[];
+  allReports: Report[];
   report: Report[];
   id: string;
-  message:string;
-  pageactual: number =1;
+  message: string;
+  pageactual: 1;
   actualPage: any;
   filterPost = ''
   constructor(public Service: AllReportsService){}
@@ -28,17 +28,14 @@ export class AllReportsComponent{
 
   getReports() {
     this.Service.getReportes().subscribe((data) => {
-      this.All_reports = data;
-      console.log('respuesta de alumno->' + this.All_reports);
+      this.allReports = data;
+      console.log('respuesta de alumno->' + this.allReports);
     });
-  }
-  
+  }  
   onSubmit(id) {
     this.id = id;
     console.log(this.id);
-    console.log("holaaa");
     this.newMessage();
-    
   }
   newMessage() {
     this.Service.changeMessage(this.id);
