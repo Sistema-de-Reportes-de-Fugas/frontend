@@ -26,7 +26,6 @@ import { RouterModule } from '@angular/router';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './all-reports/pipes/filter.pipe';
 
-
 registerLocaleData( localeMX, 'es-MX');
 registerLocaleData( localeUS, 'us');
 
