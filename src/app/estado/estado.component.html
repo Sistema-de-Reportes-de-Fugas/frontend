@@ -2,16 +2,16 @@
 <div class="container">
     <div class="text-heading">
       <br>
-      <h1>{{ "ESTADO.TITLE" | translate }}</h1>
+      <h1 i18n >Estatus de Reporte</h1>
       <br><br>
-      <h2>{{ "ESTADO.SUBTITLE" | translate }}</h2>
-      <p class="text-secondary">
-        {{ "ESTADO.DESCRIPTION" | translate }} 
+      <h2 i18n >Consulta tu reporte</h2>
+      <p class="text-secondary" i18n >
+        Por favor, ingresa tu número de reporte para ver el estado en el que se encuentra tu solicitud.
       </p>       
     </div>
     <input class="input-report-id" type="text" #textName placeholder="ingresa aquí tu número de reporte">
     <br><br>
-    <button type="button" id="button-estado" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="onSubmit(textName)">{{ "ESTADO.SEND" | translate }}</button>
+    <button type="button" id="button-estado" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" (click)="onSubmit(textName)" i18n >Enviar</button>
     <br><br>  
     <br>
     <!-- Modal -->
@@ -19,43 +19,44 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title" id="exampleModalLabel">Consulta tu Reporte</h3>
+            <h3 class="modal-title" id="exampleModalLabel" i18n >Consulta tu Reporte</h3>
           </div>
           <div class="modal-body">
             <a *ngFor="let report of All_reports" class="list-group-item list-group-item-action flex-column align-items-start">
-              <h2>{{ "REPORTADMIN.SUBTITLE" | translate }} {{report._id}}</h2>
-              <p class="text-secondary">{{ "REPORTADMIN.DESCRIPTION" | translate }}</p>  
+              <h2 i18n >Reporte #</h2>
+              <h2>{{report._id}}</h2>
+              <p class="text-secondary" i18n >Ya hemos reparado tu fuga. Gracias por tu contribución.</p>  
               
-              <div class="alert alert-success" role="alert" *ngIf="report.comentarioAdmin">
+              <div class="alert alert-success" role="alert" *ngIf="report.comentarioAdmin" i18n >
                 Ya hemos reparado tu fuga. Gracias por tu contribución. 
               </div>
-              <div class="alert alert-warning" role="alert" *ngIf="!report.comentarioAdmin">
+              <div class="alert alert-warning" role="alert" *ngIf="!report.comentarioAdmin" i18n >
                 Nos encontramos revisando la fuga. Gracias por tu comprensión. 
               </div>
               
               <ul id="lista-reportes" class="list-group">
-                <li class="text-secondary">{{ "REPORT.NOMBRE" | translate }}</li>  
+                <li class="text-secondary" i18n >Nombre(s)</li>  
                 <li class="list-group-item">{{ report.nombre }}</li>
           
-                <li class="text-secondary">{{ "REPORT.APELLIDO" | translate }}</li>  
+                <li class="text-secondary" i18n >Apellido(s)</li>  
                 <li class="list-group-item">{{ report.apellido }}</li>
                 
-                <li class="text-secondary">{{ "REPORT.CORREO" | translate }}</li>  
+                <li class="text-secondary" i18n >Correo Electrónico</li>  
                 <li class="list-group-item">{{ report.correo }}</li>
                 
-                <li class="text-secondary">{{ "REPORT.DIRECCION" | translate }}</li>  
+                <li class="text-secondary" i18n >Dirección de la fuga</li>  
                 <li class="list-group-item">{{ report.direccion }}</li>
                 
-                <li class="text-secondary">{{ "REPORT.REFERENCIA" | translate }}</li>  
+                <li class="text-secondary" i18n >Referencia de la dirección*</li>  
                 <li class="list-group-item">{{ report.referencia }}</li>
                 
-                <li class="text-secondary">{{ "REPORT.PROFESION" | translate }}</li>  
+                <li class="text-secondary" i18n >¿Qué hacía cuando se encontró con la fuga?*</li>  
                 <li class="list-group-item">{{ report.tipoPersona}}</li>
                 
-                <li class="text-secondary">{{ "REPORT.WRITEREPORT" | translate }}</li>  
+                <li class="text-secondary" i18n >Escriba su reporte:</li>  
                 <li class="list-group-item">{{ report.comentario }}</li>
           
-                <li class="text-secondary" *ngIf="report.comentarioAdmin">Reporte de Administrador: </li>  
+                <li class="text-secondary" *ngIf="report.comentarioAdmin" i18n >Reporte de Administrador: </li>  
                 <li class="list-group-item" *ngIf="report.comentarioAdmin">{{ report.comentarioAdmin }}</li>
           
                 <br>
@@ -63,7 +64,7 @@
             </a>  
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" i18n >Close</button>
           </div>
         </div>
       </div>

@@ -2,11 +2,11 @@
 <div class="container">
     <div class="text-heading">
       <br><br>
-      <h1>{{ "REPORT.TITLE" | translate }}</h1>
+      <h1 i18n>Haz tu reporte de fuga</h1>
       <br>
-      <h2>{{ "REPORT.SUBTITLE" | translate }}</h2>
-      <p class="text-secondary">
-        {{ "REPORT.DESCRIPTION" | translate }} 
+      <h2 i18n>Gracias por realizar tu reporte</h2>
+      <p class="text-secondary" i18n>
+        Para realizar tu reporte necesitamos que nos proporciones tu Nombre y Apellido, Correo Electrónico, Dirección de la Fuga, una Referencia de la Dirección, tu Profesión o que hacias al ver la fuga, el Reporte y si lo deseas tambien puedes subir una imagen.
       </p>       
     </div>
     
@@ -16,68 +16,63 @@
       <div class="container-form">
         <div class="form-row">
           <div class="col">
-            <label>{{ "REPORT.NOMBRE" | translate }}</label>
-            <input type="text" class="form-control" placeholder="{{ 'REPORT.NOMBRE' | translate }}" name = "nombre" formControlName="nombre" [ngClass]="{'is-invalid': registrationForm.get('nombre').touched && registrationForm.get('nombre').invalid}" [(value)]="text" #nombre (keyup)="updateText(nombre.value)">
-            <div class="invalid-feedback"><div>Ingresa tu nombre</div></div>
+            <label i18n>Nombre(s)</label>
+            <input type="text" class="form-control" placeholder="Nombre(s)" name = "nombre" formControlName="nombre" [ngClass]="{'is-invalid': registrationForm.get('nombre').touched && registrationForm.get('nombre').invalid}" [(value)]="text" #nombre (keyup)="updateText(nombre.value)">
+            <div class="invalid-feedback"><div i18n>Ingresa tu nombre</div></div>
           </div>
           <div class="col">
-            <label >{{ "REPORT.APELLIDO" | translate }}</label>
-            <input type="text" class="form-control" placeholder="{{ 'REPORT.APELLIDO' | translate }}" name = "apellido" formControlName="apellido"  [ngClass]="{'is-invalid': registrationForm.get('apellido').touched && registrationForm.get('apellido').invalid}"[(value)]="text" #apellido (keyup)="updateApellido(apellido.value)">
-            <div class="invalid-feedback"><div>Ingresa tu apellido</div></div>
+            <label i18n>Apellido(s)</label>
+            <input type="text" class="form-control" placeholder="Apellido(s)" name = "apellido" formControlName="apellido"  [ngClass]="{'is-invalid': registrationForm.get('apellido').touched && registrationForm.get('apellido').invalid}"[(value)]="text" #apellido (keyup)="updateApellido(apellido.value)">
+            <div class="invalid-feedback"><div i18n>Ingresa tu apellido</div></div>
           </div>
         </div>
         <br>
         <div class="form-group">
-          <label for="exampleInputEmail1">{{ "REPORT.CORREO" | translate }}</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'REPORT.CORREOPLACE' | translate }}" name = "email" formControlName="correo" [ngClass]="{'is-invalid': registrationForm.get('correo').touched && registrationForm.get('correo').invalid}" [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
-          <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
+          <label for="exampleInputEmail1" i18n>Correo Electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo Electrónico" name = "email" formControlName="correo" [ngClass]="{'is-invalid': registrationForm.get('correo').touched && registrationForm.get('correo').invalid}" [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
+          <small id="emailHelp" class="form-text text-muted" i18n>Dirección de la fuga</small>
           <div *ngIf="{'is-invalid': registrationForm.get('correo').touched && registrationForm.get('correo').invalid}" class="invalid-feedback">
-            <div>Ingresa tu correo</div>
+            <div i18n>Ingresa tu correo</div>
           </div>
         </div>
         <div class="g_map">
           <iframe width="50%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJyk1sTYAzoURW4rR6E6e_d4&key=AIzaSyD8hmujj1sQUfvmXftMyFIzWSFvZSmBwmc" allowfullscreen></iframe>
-          <p>{{ "REPORT.MAP" | translate }}</p>
+          <p i18n>Utiliza este mapa para apoyarte a encontrar la dirección de la fuga.</p>
         </div>
         <div class="form-group">
-          <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="{{ 'REPORT.DIRECCIONPLACE' | translate }}" name = "direccion" formControlName="direccion"  [ngClass]="{'is-invalid': registrationForm.get('direccion').touched && registrationForm.get('direccion').invalid}" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
-          <div class="invalid-feedback"><div>Ingresa tu dirección</div></div>
+          <label for="inputAddress" i18n>Dirección de la fuga</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Dirección de la fuga" name = "direccion" formControlName="direccion"  [ngClass]="{'is-invalid': registrationForm.get('direccion').touched && registrationForm.get('direccion').invalid}" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
+          <div class="invalid-feedback"><div i18n>Ingresa tu dirección</div></div>
         </div>
         <div class="form-group">
-          <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="{{ 'REPORT.REFERENCIAPLACE' | translate }}" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
+          <label for="inputAddress2" i18n>Referencia de la dirección*</label>
+          <input type="text" class="form-control" id="inputAddress2" placeholder="Escriba una referencia (calle, avenida, etc.)" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">{{ "REPORT.PROFESION" | translate }}</label>
+          <label for="exampleFormControlSelect1" i18n>¿Qué hacía cuando se encontró con la fuga?*</label>
           <select class="form-control" id="exampleFormControlSelect1" name = "profesion" formControlName="tipoPersona">
             <option *ngFor="let tipoPersona of tipoPersonas" [value]="tipoPersona" #profesion (keyup)="updateProfesion(profesion.value)">{{tipoPersona}}</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1" name = "comentario">{{ "REPORT.WRITEREPORT" | translate }}</label>
+          <label for="exampleFormControlTextarea1" name = "comentario" i18n>Escriba su reporte:</label>
           <textarea rows="4" type="text" class="form-control" id="inputAddress3" placeholder="" name = "comentario" formControlName="comentario" [ngClass]="{'is-invalid': registrationForm.get('comentario').touched && registrationForm.get('comentario').invalid}" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
-          <div class="invalid-feedback"><div>Ingresa tu comentario</div></div>
+          <div class="invalid-feedback"><div i18n>Ingresa tu comentario</div></div>
         </div>
-        <div class="form-group">
-          <label for="exampleFormControlFile1" name = "imagen">{{ "REPORT.IMAGEN" | translate }}</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imagen" formControlName="imagen">
-          <small>Opcional*</small>
-        </div>
-        <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active" class="btn btn-success" type="button" (click)="onSubmit()" [disabled]="!registrationForm.valid">{{ "REPORT.ENVIAR" | translate }} </button>
+        <button [routerLink]="['/cliente-enviado']" routerLinkActive="router-link-active" class="btn btn-success" type="button" (click)="onSubmit()" [disabled]="!registrationForm.valid">Enviar</button>
         <div *ngIf="!registrationForm.valid">
-            <small>Por favor completa los campos para habilitar el botón. </small>
+            <small i18n>Por favor completa los campos para habilitar el botón. </small>
         </div>
       </div>
       <br>
       <hr/>
       <div class="form-group">
-        <label for="exampleFormControlInput1">¿Cuentas con un reporte y deseas editarlo? </label>
-        <p class="text-secondary">Ingresa el numero de reporte</p> 
+        <label for="exampleFormControlInput1" i18n>¿Cuentas con un reporte y deseas editarlo? </label>
+        <p class="text-secondary" i18n>Ingresa el numero de reporte</p> 
         <input type="text" #idReporte class="form-control" id="exampleFormControlInput1" placeholder="Numero de reporte..." >
       </div>
       <br>
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="onSubmitReport(idReporte)">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="onSubmitReport(idReporte)" i18n>
         Edita tu reporte
       </button>
       
@@ -86,7 +81,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modifica tu Reporte</h5>
+              <h5 class="modal-title" id="exampleModalLabel" i18n>Modifica tu Reporte</h5>
               <h5 class="modal-title" id="exampleModalLabel"></h5>
               
             </div>
@@ -94,60 +89,60 @@
               <!-- Modal Body--> 
               <div class="form-row">
                 <div class="col" *ngIf="nombre2" >
-                  <label >{{ "REPORT.NOMBRE" | translate }}</label>
-                  <input  type="text" class="form-control-plaintext"  [(ngModel)]="nombre2" placeholder="{{ 'REPORT.NOMBRE' | translate }}" name = "nombre" formControlName="nombre" [(value)]="text" #nombre (keyup)="updateText(nombre.value)" readonly>   
+                  <label i18n>Nombre(s)</label>
+                  <input  type="text" class="form-control-plaintext"  [(ngModel)]="nombre2" placeholder="Nombre" name = "nombre" formControlName="nombre" [(value)]="text" #nombre (keyup)="updateText(nombre.value)" readonly>   
                 </div>
               
               
                 <div class="col" *ngIf="apellido2">
-                  <label >{{ "REPORT.APELLIDO" | translate }}</label>
-                  <input type="text" class="form-control-plaintext"  [(ngModel)]="apellido2" placeholder="{{ 'REPORT.APELLIDO' | translate }}" name = "apellido" formControlName="apellido" [(value)]="text" #apellido (keyup)="updateApellido(apellido.value)" readonly> 
+                  <label i18n>Apellido(s)</label>
+                  <input type="text" class="form-control-plaintext"  [(ngModel)]="apellido2" placeholder="Apellido" name = "apellido" formControlName="apellido" [(value)]="text" #apellido (keyup)="updateApellido(apellido.value)" readonly> 
                 </div>
               </div>
               <div class="form-group" *ngIf="correo2">
-                <label for="exampleInputEmail1">{{ "REPORT.CORREO" | translate }}</label>
-                <input type="email" class="form-control" [(ngModel)]="correo2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'REPORT.CORREOPLACE' | translate }}" name = "email" formControlName="correo"  [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
-                <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
+                <label for="exampleInputEmail1" i18n>Correo Electrónico</label>
+                <input type="email" class="form-control" [(ngModel)]="correo2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" name = "email" formControlName="correo"  [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
+                <small id="emailHelp" class="form-text text-muted" i18n>No compartiremos tu correo con ningun institución o dependencia.</small>
               </div>
               <div class="form-group" *ngIf="!correo2">
-                <label for="exampleInputEmail1">{{ "REPORT.CORREO" | translate }}</label>
-                <input type="email" class="form-control" [(ngModel)]="correo2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ 'REPORT.CORREOPLACE' | translate }}" name = "email" formControlName="correo"  [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
-                <small id="emailHelp" class="form-text text-muted">{{ "REPORT.PROTECCION" | translate }}</small>
+                <label for="exampleInputEmail1" i18n>Correo Electrónico</label>
+                <input type="email" class="form-control" [(ngModel)]="correo2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" name = "email" formControlName="correo"  [(value)]="text" #correo (keyup)="updateCorreo(correo.value)">
+                <small id="emailHelp" class="form-text text-muted" i18n>No compartiremos tu correo con ningun institución o dependencia.</small>
               </div>
               <div class="form-group" *ngIf="direccion2">
-                <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
-                <input type="text" class="form-control" [(ngModel)]="direccion2" id="inputAddress" placeholder="{{ 'REPORT.DIRECCIONPLACE' | translate }}" name = "direccion" formControlName="direccion" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
+                <label for="inputAddress" i18n>Dirección de la fuga</label>
+                <input type="text" class="form-control" [(ngModel)]="direccion2" id="inputAddress" placeholder="Dirección" name = "direccion" formControlName="direccion" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
               </div>
               <div class="form-group" *ngIf="!direccion2">
-                <label for="inputAddress">{{ "REPORT.DIRECCION" | translate }}</label>
-                <input type="text" class="form-control" [(ngModel)]="direccion2" id="inputAddress" placeholder="{{ 'REPORT.DIRECCIONPLACE' | translate }}" name = "direccion" formControlName="direccion" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
+                <label for="inputAddress" i18n>Dirección de la fuga</label>
+                <input type="text" class="form-control" [(ngModel)]="direccion2" id="inputAddress" placeholder="Dirección" name = "direccion" formControlName="direccion" [(value)]="text" #direccion (keyup)="updateDireccion(direccion.value)">
               </div>
               <div class="form-group" *ngIf="referencia2">
-                <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
-                <input type="text" class="form-control" [(ngModel)]="referencia2" id="inputAddress2" placeholder="{{ 'REPORT.REFERENCIAPLACE' | translate }}" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
+                <label for="inputAddress2" i18n>Referencia de la dirección*</label>
+                <input type="text" class="form-control" [(ngModel)]="referencia2" id="inputAddress2" placeholder="Escriba una referencia (calle, avenida, etc.)" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
               </div>
               <div class="form-group" *ngIf="!referencia2">
-                <label for="inputAddress2">{{ "REPORT.REFERENCIA" | translate }}</label>
-                <input type="text" class="form-control" [(ngModel)]="referencia2" id="inputAddress2" placeholder="{{ 'REPORT.REFERENCIAPLACE' | translate }}" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
+                <label for="inputAddress2" i18n>Referencia de la dirección*</label>
+                <input type="text" class="form-control" [(ngModel)]="referencia2" id="inputAddress2" placeholder="Escriba una referencia (calle, avenida, etc.)" name = "referencia" formControlName="referencia" [(value)]="text" #referencia (keyup)="updateReferencia(referencia.value)">
               </div>
               <div class="form-group" *ngIf="tipoPersona2">
-                <label for="exampleFormControlSelect1">{{ "REPORT.PROFESION" | translate }}</label>
-                <input type="text" class="form-control-plaintext"  [(ngModel)]="tipoPersona2" placeholder="{{ 'REPORT.APELLIDO' | translate }}" name = "profesion" formControlName="tipoPersona" [(value)]="text" #profesion (keyup)="updateProfesion(profesion.value)" readonly>
+                <label for="exampleFormControlSelect1" i18n>Qué hacía cuando se encontró con la fuga?*</label>
+                <input type="text" class="form-control-plaintext"  [(ngModel)]="tipoPersona2" placeholder="Actividad que realizaba" name = "profesion" formControlName="tipoPersona" [(value)]="text" #profesion (keyup)="updateProfesion(profesion.value)" readonly>
               </div> 
               <div class="form-group" *ngIf="comentario2">
-                <label for="exampleFormControlTextarea1" name = "comentario">{{ "REPORT.WRITEREPORT" | translate }}</label>
-                <textarea rows="4" type="text" [(ngModel)]="comentario2" class="form-control" id="inputAddress3" placeholder="" name = "comentario" formControlName="comentario" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
+                <label for="exampleFormControlTextarea1" name = "comentario" i18n>Escriba su reporte:</label>
+                <textarea rows="4" type="text" [(ngModel)]="comentario2" class="form-control" id="inputAddress3" placeholder="Cuente su história" name = "comentario" formControlName="comentario" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
               </div>
               <div class="form-group" *ngIf="!comentario2">
-                <label for="exampleFormControlTextarea1" name = "comentario">{{ "REPORT.WRITEREPORT" | translate }}</label>
-                <textarea rows="4" type="text" [(ngModel)]="comentario2" class="form-control" id="inputAddress3" placeholder="" name = "comentario" formControlName="comentario" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
+                <label for="exampleFormControlTextarea1" name = "comentario" i18n>Escriba su reporte:</label>
+                <textarea rows="4" type="text" [(ngModel)]="comentario2" class="form-control" id="inputAddress3" placeholder="Cuente su história" name = "comentario" formControlName="comentario" [(value)]="text" #comentarios (keyup)="updateComentarios(comentarios.value)"></textarea>
               </div>
             
             </div>
             
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onSubmitClose()">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onSubmitUpdate()">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onSubmitClose()" i18n>Cerrar</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="onSubmitUpdate()" i18n>Guardar</button>
             </div>
           </div>
         </div>

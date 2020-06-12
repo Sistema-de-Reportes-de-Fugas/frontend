@@ -2,34 +2,34 @@
 <div class="container">
   <br>
   <div class="text-heading" *ngIf="!auth.loggedIn">
-    <h1>{{ "ADMIN.TITLE" | translate }}</h1>
+    <h1 i18n>Ingresa a tu cuenta</h1>
     <br>
-    <h2>{{ "ADMIN.SUBTITLE" | translate }}</h2>
-    <p class="text-secondary">{{ "ADMIN.DESCRIPTION" | translate }}</p>
+    <h2 i18n>Bienvenido</h2>
+    <p i18n class="text-secondary">Ingresa el correo electrónico y la contraseña con el que te encuentras registrado en el sistema.</p>
     <br><br>
   </div>
-  <button class="btn btn-success" type="button"  (click)="auth.login()" *ngIf="!auth.loggedIn">Iniciar Sesión</button>
+  <button i18n class="btn btn-success" type="button"  (click)="auth.login()" *ngIf="!auth.loggedIn">Iniciar Sesión</button>
   
   <div class="text-heading" *ngIf="auth.loggedIn">
     <div class="row">
-      <h1>Administrador:</h1>
+      <h1 i18n>Administrador:</h1>
     </div>
     <br>
     <div class="row">
       <div class="col">
-        <h5>Si deseas ingresas al sistema de seguimiento de reportes, da clic en Ingresa a Reportes</h5>
+        <h5 i18n>Si deseas ingresas al sistema de seguimiento de reportes, da clic en Ingresa a Reportes</h5>
       </div>
       <div class = "col">
-        <button [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active" class="btn btn-success">Ingresa a Reportes</button>
+        <button i18n [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active" class="btn btn-success">Ingresa a Reportes</button>
       </div>
     </div>
     <br><br>
     <div class="row">
       <div class="col">
-        <h5>Si deseas salir de tu cuenta, da clic en Termina la sesión</h5>
+        <h5 i18n>Si deseas salir de tu cuenta, da clic en Termina la sesión</h5>
       </div>
       <div class="col">
-        <button class="btn btn-danger" type="button"  (click)="auth.logout()">Termina la sesión</button>
+        <button i18n class="btn btn-danger" type="button"  (click)="auth.logout()">Termina la sesión</button>
       </div>
     </div>
   </div>

@@ -8,7 +8,7 @@ import { map, catchError, tap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { ReporteService } from  '../reporte/service/reporte.service'
 import { Report } from '../all-reports/report';
-import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-reporte',
@@ -36,7 +36,7 @@ export class ReporteComponent implements OnInit {
     })
   }
   
-  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient, public Service: ReporteService, public translate: TranslateService) { }
+  constructor(public fb: FormBuilder, private data: DataService, private http: HttpClient, public Service: ReporteService) { }
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
   
@@ -109,8 +109,7 @@ export class ReporteComponent implements OnInit {
       const data = this.registrationForm.value;
       console.log(data)
       const headers= new HttpHeaders({'Content-Type':'application/json'});
-      console.log(this.translate.currentLang);
-      const lang = this.translate.currentLang; 
+      
       this.http.put('http://localhost:8080/api/reportes' + '/' + id, data, {headers}).subscribe(
         res=>{
           console.log(res);
