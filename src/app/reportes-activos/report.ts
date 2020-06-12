@@ -1,7 +1,7 @@
 export class Report {
-  
+
     constructor(
-      public _id?:number,
+      public _id?: number,
       public numeroReporte?: Number,
       public comentario?: string,
       public nombre?: string,
@@ -11,5 +11,5 @@ export class Report {
       {
     }
 
-    
+
   }

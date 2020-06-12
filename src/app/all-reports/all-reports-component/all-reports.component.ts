@@ -13,12 +13,12 @@ export class AllReportsComponent{
   All_reports: Report[];
   report: Report[];
   id: string;
-  message:string;
-  pageactual: number =1;
+  message: string;
+  pageactual = 1;
   actualPage: any;
-  filterPost = ''
+  filterPost = '';
   constructor(public Service: AllReportsService){}
-  
+
 
   ngOnInit(): void {
     this.getReports();
@@ -32,13 +32,13 @@ export class AllReportsComponent{
       console.log('respuesta de alumno->' + this.All_reports);
     });
   }
-  
+
   onSubmit(id) {
     this.id = id;
     console.log(this.id);
-    console.log("holaaa");
+    console.log('holaaa');
     this.newMessage();
-    
+
   }
   newMessage() {
     this.Service.changeMessage(this.id);

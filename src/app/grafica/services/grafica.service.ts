@@ -10,10 +10,10 @@ import { map, retry, catchError, tap } from 'rxjs/operators';
 export class GraficaService {
 
   reporte: Reporte[];
-  
+
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
-    var headerDict = {
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -28,9 +28,9 @@ export class GraficaService {
 
 
   private extractData(res: Response) {
-    let body = res;
-    console.log(body)
-    return body|| {};
+    const body = res;
+    console.log(body);
+    return body || {};
   }
 
   handleError(error: HttpErrorResponse) {
@@ -45,11 +45,11 @@ export class GraficaService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-  
-  
-  //getReports() {
+
+
+  // getReports() {
    // return REPORTS;
-  //}
+  // }
 
   constructor(private http: HttpClient) { }
 }

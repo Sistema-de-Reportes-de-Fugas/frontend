@@ -25,29 +25,29 @@ export class ReporteAdminComponent implements OnInit {
   referencia2: Reporte[];
   tipoPersona2: Reporte[];
   notificado2: Reporte[];
-  id:[];
-  someInput: string; 
+  id: [];
+  someInput: string;
   comentarioAdmin2: Reporte[];
   constructor(public Service: ReporteService, public servicio: AllReportsService, public fb: FormBuilder, private http: HttpClient){}
-  
+
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
-  
+
   registrationForm = this.fb.group({
-    nombre: [""],
+    nombre: [''],
     apellido: [''],
     correo: [''],
     direccion: [''],
     referencia: [''],
     tipoPersona: [''],
     comentario: [''],
-    comentarioAdmin: ['']  
+    comentarioAdmin: ['']
   });
 
 
   ngOnInit(): void {
     this.servicio.currentMessage.subscribe(message => this.message = message);
-    console.log(this.message)
+    console.log(this.message);
     this.getReports(this.message);
   }
 
@@ -55,8 +55,8 @@ export class ReporteAdminComponent implements OnInit {
     this.Service.getReportes(this.message).subscribe((data) => {
       this.All_reports = data;
       console.log('respuesta de alumno->' + this.All_reports);
-      console.log(this.All_reports)
-      for (var report of data) {
+      console.log(this.All_reports);
+      for (const report of data) {
         console.log(report);
         this.nombre2 = report.nombre;
         this.apellido2 = report.apellido;
@@ -77,16 +77,16 @@ export class ReporteAdminComponent implements OnInit {
         tipoPersona: this.tipoPersona2,
         comentario: this.comentario2 ,
         comentarioAdmin: this.comentarioAdmin2,
-       
+
       });
 
 
     });
-    
+
   }
 
   onSubmit() {
-    console.log("DELETE ACTIVATED")
+    console.log('DELETE ACTIVATED');
     this.Service.deleteReportes(this.message).subscribe((data) => {
       this.All_reports = data;
       console.log('respuesta de alumno->' + this.All_reports);
@@ -94,8 +94,8 @@ export class ReporteAdminComponent implements OnInit {
   }
 
   onSubmitAdmin(comentarioAdmin) {
-    console.log(comentarioAdmin.value)
-    
+    console.log(comentarioAdmin.value);
+
     this.comentarioAdmin2 = comentarioAdmin.value;
     if (this.comentarioAdmin2) {
       console.log(this.comentarioAdmin2);
@@ -110,31 +110,31 @@ export class ReporteAdminComponent implements OnInit {
         comentarioAdmin: comentarioAdmin.value,
       });
 
-      console.log(this.registrationForm.value)
-      console.log(this.message)
-      
+      console.log(this.registrationForm.value);
+      console.log(this.message);
+
       const data = this.registrationForm.value;
-      const headers= new HttpHeaders({'Content-Type':'application/json'});
+      const headers = new HttpHeaders({'Content-Type': 'application/json'});
 
       this.http.put('http://localhost:8080/api/reportes' + '/' + this.message, data, {headers}).subscribe(
-      res=>{
+      res => {
         console.log(res);
       },
-      err=>{
-        console.log('err:'+err);
+      err => {
+        console.log('err:' + err);
       }
-      
+
     );
 
     }else {
-      console.log("no existe")
+      console.log('no existe');
     }
-    
+
   }
 
   onSubmitBack() {
-    console.log("Regresó")
+    console.log('Regresó');
   }
-  
+
 
 }
