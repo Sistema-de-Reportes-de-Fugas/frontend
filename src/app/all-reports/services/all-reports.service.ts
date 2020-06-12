@@ -11,8 +11,8 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class AllReportsService {
 
   reporte: Report[];
-  
-  private messageSource = new BehaviorSubject<string>("default message");
+  endpoint: 'http://localhost:8080/api/reportes';
+  private messageSource = new BehaviorSubject<string>('default message');
   currentMessage = this.messageSource.asObservable();
 
   getReportes(): Observable<any> {
@@ -27,11 +27,11 @@ export class AllReportsService {
       headers: new HttpHeaders(headerDict),
     };
 
-    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    return this.http.get(this.endpoint, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
   }
 
   private extractData(res: Response) {
-    let body = res;
+    const body = res;
     console.log(body);
     return body || {};
   }
@@ -47,15 +47,14 @@ export class AllReportsService {
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
-  }  
+  }
   changeMessage(message: string) {
     this.messageSource.next(message);
   }
 
-
-  //getReports() {
+  // getReports() {
    // return REPORTS;
-  //}
+  // }
 
   constructor(private http: HttpClient) { }
 

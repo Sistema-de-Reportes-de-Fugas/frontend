@@ -27,37 +27,35 @@ import { AllReportsService } from '../all-reports/services/all-reports.service';
 
 
 export class EstadoComponent implements OnInit {
-  
   id: string;
   nombre: string;
   apellido: string;
-  all_reports: Reporte[];
+  allReports: Reporte[];
   message: string;
-  all_perro: Reporte[];
+  allPerro: Reporte[];
   identificador: any;
-  
+
   constructor(public Service: EstadoService, public fb: FormBuilder, public servicio: AllReportsService) { }
 
   ngOnInit(): void {
-    
   }
-  
+
   getReports(id: string) {
     this.Service.getReportes(id).subscribe((data) => {
-      this.all_reports = data;
-      console.log(this.all_perro);
-      console.log('respuesta de alumno->' + this.all_reports);
+      this.allReports = data;
+      console.log(this.allPerro);
+      console.log('respuesta de alumno->' + this.allReports);
     });
   }
-  
+
   onSubmit(id) {
     this.identificador = id.value;
     if (this.identificador === '') {
       alert('Por favor ingresa tu numero de reporte');
-      this.all_reports = [];
+      this.allReports = [];
     }else {
       this.getReports(id.value);
-      this.all_reports = [];
+      this.allReports = [];
     }
   }
 

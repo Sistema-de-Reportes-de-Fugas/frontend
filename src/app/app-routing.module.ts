@@ -42,7 +42,6 @@ const routes: Routes = [
       multi: true
     }
   ]
-  
 })
 export class AppRoutingModule { }
 // tslint:disable-next-line:max-line-length

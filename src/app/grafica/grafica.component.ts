@@ -14,7 +14,7 @@ export class GraficaComponent implements OnInit {
   chart2 = [];
   pie: any;
   doughnut: any;
-  All_reports: Reporte[];
+  allReports: Reporte[];
   data1 = [];
   len: number;
   len2: number;
@@ -22,6 +22,7 @@ export class GraficaComponent implements OnInit {
   len4: number;
   len5: number;
   lentotal: number;
+  counter = 0;
   ngOnInit() {
 
     this.getReports();
@@ -94,15 +95,11 @@ export class GraficaComponent implements OnInit {
           display: true,
           text: 'Reportes Resueltos'
         }, legend: {
-
           position: 'top',
-
         },
         animation: {
-
           animateScale: true,
           animateRotate: true
-
         }
       },
       data: {
@@ -111,50 +108,43 @@ export class GraficaComponent implements OnInit {
           data: [this.lentotal, 10],
           backgroundColor: ['rgba(46,89,33,0.8)', 'rgba(145,145,145,0.8)'],
           label: 'reportesResueltos'
-
         }],
-
         labels: ['Reportes Realizados']
-
       }
-
     });
   }
-
-  counter = 0;
   getReports() {
     this.Service.getReportes().subscribe((data) => {
-      this.All_reports = data;
-      console.log('respuesta de alumno->' + this.All_reports);
+      this.allReports = data;
+      console.log('respuesta de alumno->' + this.allReports);
 
-      this.len = this.All_reports.filter(function(item) {
+      this.len = this.allReports.filter((item) => {
         return item.tipoPersona === 'Reportero';
       }).length;
       console.log(this.len);
 
-      this.len2 = this.All_reports.filter(function(item) {
+      this.len2 = this.allReports.filter((item) => {
         return item.tipoPersona === 'Agente de la SSP';
       }).length;
       console.log(this.len2);
 
-      this.len3 = this.All_reports.filter(function(item) {
+      this.len3 = this.allReports.filter((item) => {
         return item.tipoPersona === 'Transeunte';
       }).length;
       console.log(this.len3);
 
-      this.len4 = this.All_reports.filter(function(item) {
+      this.len4 = this.allReports.filter((item) => {
         return item.tipoPersona === 'Comerciante';
       }).length;
       console.log(this.len4);
 
-      this.len5 = this.All_reports.filter(function(item) {
+      this.len5 = this.allReports.filter((item) => {
         return item.tipoPersona === 'Otro';
       }).length;
       console.log(this.len5);
 
       this.lentotal = this.len + this.len2 + this.len3 + this.len4 + this.len5;
       console.log(this.lentotal);
-
 
       this.chart.chart.data.datasets[0].data = [this.len, this.len2, this.len3, this.len4, this.len5];
       this.doughnut.chart.data.datasets[0].data = [this.lentotal];
@@ -173,9 +163,6 @@ export class GraficaComponent implements OnInit {
   updateChart() {
     this.chart.update(); // This re-renders the canvas element.
   }
-
-
-
 
   addData(chart, label, data) {
     chart.data.labels.push(label);
