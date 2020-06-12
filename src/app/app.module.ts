@@ -25,6 +25,9 @@ import { RouterModule } from '@angular/router';
 //Externals
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from './all-reports/pipes/filter.pipe';
+import { ReportesActivosPipe } from './reportes-activos/pipes/reportes-activos.pipe';
+import { ReporteAdmin2Component } from './reporte-admin2/reporte-admin2.component';
+
 
 
 registerLocaleData( localeMX, 'es-MX');
@@ -42,6 +45,8 @@ registerLocaleData( localeUS, 'us');
     AllReportsComponent,
     GraficaComponent,
     FilterPipe,
+    ReportesActivosPipe,
+    ReporteAdmin2Component,
 
   ],
   imports: [
