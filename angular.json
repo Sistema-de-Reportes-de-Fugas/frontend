@@ -40,6 +40,21 @@
             ]
           },
           "configurations": {
+            "es": {
+              "aot": true,
+              "i18nFile": "locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "en": {
+              "aot": true,
+              "i18nFile": "locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "pt",
+              "i18nMissingTranslation": "error"
+            },
+
             "production": {
               "fileReplacements": [
                 {
@@ -79,6 +94,12 @@
           "configurations": {
             "production": {
               "browserTarget": "angular:build:production"
+            },
+            "es": {
+              "browserTarget": "angular:build:es"
+            },
+            "en": {
+              "browserTarget": "angular:build:en"
             }
           }
         },

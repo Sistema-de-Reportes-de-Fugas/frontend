@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9df0df813e1216626231c0afc536704d87a5114d" datatype="html">
+        <source>Inicio<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-no-ribbon/header-no-ribbon.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="202b60b2308ec83ecb15ab567e19b38b0c37a5c3" datatype="html">
+        <source>Reporte<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-no-ribbon/header-no-ribbon.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="408cb6073e60c5d966296a3207fc596adca75e01" datatype="html">
+        <source>Admin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a31ee6e89db7836a31c69b81caa5fc342d64a4d2" datatype="html">
+        <source>Versión Beta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1a1848c79f0ba9a59f7922ad80f12f912ff244a3" datatype="html">
+        <source>¡Bienvenido!
+      <x id="START_SMALL_TEXT" ctype="x-small" equiv-text="&lt;small&gt;"/><x id="CLOSE_SMALL_TEXT" ctype="x-small" equiv-text="&lt;/small&gt;"/>
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cf5303e62ab794ae52d986d3332fd32e286a740d" datatype="html">
+        <source>
+      Hola, te encuentras como administrador. 
+    </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9a74dc90ed7616142c02e3947db70af4baf5469e" datatype="html">
+        <source>Sistema de reportes de fuga de agua de la Ciudad de México</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c0305613b1d0f1f58ec777005dcc286ce5e348b0" datatype="html">
+        <source>¡Reporta!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c0cde7106ba6193cd49d3d1de015e7ac00cc1c83" datatype="html">
+        <source>Muchas gracias por tu contribución con la ciudad. Si deseas realizar un reporte de fuga de agua, da clic aquí.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eef0d3cf488f0d92d78a49eeecbeb85c59253b15" datatype="html">
+        <source>Reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="afff781d130cccc987ca9f34d68c639596da947e" datatype="html">
+        <source>Estado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-no-ribbon/header-no-ribbon.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="66d239bb4d01e54b19be0d52e0bd38d23c5ab3a2" datatype="html">
+        <source>Si ya hiciste un reporte y deseas saber si la fuga ya fue compuesta, da clic aquí.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="87a8eb9aa4fce8c111488c0a13bb88492baaa986" datatype="html">
+        <source>La Plataforma</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2ebe26699524415d2003528db15d55bba4694acc" datatype="html">
+        <source>Si deseas saber mas información de esta plataforma da clic aquí.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c42da4a20ae8e61e5d2bc6d1a85bbc5f7dec29d7" datatype="html">
+        <source>Explicación</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/container-home/container-home.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2d873f87e9155f29ff54d39b345df9a959cdbc3a" datatype="html">
+        <source>Haz tu reporte de fuga</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="17862efb8c2598aad7fb6fdc3f15ed416e749bbc" datatype="html">
+        <source>Gracias por realizar tu reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ca5d63f5980128e9b7e32c94ad892ce4fbedbf5b" datatype="html">
+        <source>
+        Para realizar tu reporte necesitamos que nos proporciones tu Nombre y Apellido, Correo Electrónico, Dirección de la Fuga, una Referencia de la Dirección, tu Profesión o que hacias al ver la fuga, el Reporte y si lo deseas tambien puedes subir una imagen.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="90d25d6a2b339b7595486907bc3275166e51bff8" datatype="html">
+        <source>Nombre(s)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7486fd8b40688990beae7bc0c98357c08c379b6e" datatype="html">
+        <source>Ingresa tu nombre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="53b2ef3223e2cd8792417eab399b6224ea86c481" datatype="html">
+        <source>Apellido(s)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4ac50b1f351ffaff7716a40a8521a44f194c9c80" datatype="html">
+        <source>Ingresa tu apellido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="eb7bbd439c806aabe5b7100de0ba5623afc90841" datatype="html">
+        <source>Correo Electrónico</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="566dd6cc85c65b590dca741e12e7426b61f45431" datatype="html">
+        <source>Dirección de la fuga</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="40c6a1f15da245cdf439b0cedeea325d2678910c" datatype="html">
+        <source>Ingresa tu correo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a1bf60f636f2da5eac02dcfb7325d4f8722fde01" datatype="html">
+        <source>Utiliza este mapa para apoyarte a encontrar la dirección de la fuga.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a4edb63fbd3a12574d57670ef2d946bde3fb2100" datatype="html">
+        <source>Ingresa tu dirección</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1e1cd2d9e16a780de76d088271dd6f767ce40a43" datatype="html">
+        <source>Referencia de la dirección*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">121</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a3a0c67ac767e2a5fc954b6f2541c9699a013a1b" datatype="html">
+        <source>¿Qué hacía cuando se encontró con la fuga?*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54338fd464ca7f059c62c6c23dca0cf2e9d7fed4" datatype="html">
+        <source>Escriba su reporte:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d9466984cd14b53aace998cf3b341e75cb44ecfb" datatype="html">
+        <source>Ingresa tu comentario</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aab875449aa6848ee17ed8ddd3a75a6388e3a770" datatype="html">
+        <source>Por favor completa los campos para habilitar el botón. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8003a8efcc06107910594c24fc78422b4f004047" datatype="html">
+        <source>¿Cuentas con un reporte y deseas editarlo? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="30b882574f98c6164f16eca9f299d84ae17e6eb0" datatype="html">
+        <source>Ingresa el numero de reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="b5aca51b238c567554b4ffd7e2cee0e8d79746a7" datatype="html">
+        <source>
+        Edita tu reporte
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0bfa3e2f95cab5ff7c2d8d74bfd10351b368d7a0" datatype="html">
+        <source>Modifica tu Reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5865419cb95bfe1b7f653cb9f3e065cc9d4c057b" datatype="html">
+        <source>No compartiremos tu correo con ningun institución o dependencia.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d9b03c8448d27cc2df79b08ccd7fdac3d48e22b9" datatype="html">
+        <source>Qué hacía cuando se encontró con la fuga?*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">129</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="0acf4e0f9350f920b529a38364281d337c54edfd" datatype="html">
+        <source>Cerrar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6943588fb2c336651c23e60f0c146379ad49a0a4" datatype="html">
+        <source>Guardar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte/reporte.component.html</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d9c19cab53e72935ea3a5187f2757d13a339a3a5" datatype="html">
+        <source>¡Tu reporte ha sido enviado!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-cliente-enviado/reporte-cliente-enviado.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="63fbcbb65284320444ab17fe7a7bbac6462339a4" datatype="html">
+        <source>El número de reporte es:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-cliente-enviado/reporte-cliente-enviado.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="60384f5616d4969f3c68ec43106c2595076aaca0" datatype="html">
+        <source>Regresar a Inicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-cliente-enviado/reporte-cliente-enviado.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="175d67f864982e6cb83c44ec233f98bd812665f4" datatype="html">
+        <source>Estatus de Reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="794db345b93384f3a5b9c8b2c7dcc63d745b0553" datatype="html">
+        <source>Consulta tu reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="06bb18941cb62edbe343efd3a7742c88c2e587cf" datatype="html">
+        <source>
+        Por favor, ingresa tu número de reporte para ver el estado en el que se encuentra tu solicitud.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="01de17158ec5ff25baf3c6ffa9fc3375a25e0c6d" datatype="html">
+        <source>Enviar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d32bda8f2b6a2b3c8906fb0504b9a437bc627f34" datatype="html">
+        <source>Consulta tu Reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="169ef0e4b8c8f89577eeb9ae4b2ae395379860d0" datatype="html">
+        <source>Reporte #</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1d115af14ca685384d6663ce7b011a1fca297e9c" datatype="html">
+        <source>Ya hemos reparado tu fuga. Gracias por tu contribución.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9345417460380d06413cc241dd86f84f3d7cedca" datatype="html">
+        <source>
+                Ya hemos reparado tu fuga. Gracias por tu contribución. 
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2a6c2941ef2d82439bb283ccb211b121c1378a49" datatype="html">
+        <source>
+                Nos encontramos revisando la fuga. Gracias por tu comprensión. 
+              </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f15d5a32da533c0a2de1c6e3f20f594d4258e343" datatype="html">
+        <source>Reporte de Administrador: </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="f4e529ae5ffd73001d1ff4bbdeeb0a72e342e5c8" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/estado/estado.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e788dd44118d95aac9d6e7d74c721ceb545aa861" datatype="html">
+        <source>Ingresa a tu cuenta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d736fb7085590c5ec6408bf12d5afde7388a81ee" datatype="html">
+        <source>Bienvenido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="77ce9cf1080261ddb12b9415dc04507f976aece5" datatype="html">
+        <source>Ingresa el correo electrónico y la contraseña con el que te encuentras registrado en el sistema.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="656864832cc2c37106aaa75d9fe345bd879508c5" datatype="html">
+        <source>Iniciar Sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="910e72baf82b4c569a9fc79ac7696122461ccb90" datatype="html">
+        <source>Administrador:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="56120cf96bcc7d7c405a3928d102b0cae4894716" datatype="html">
+        <source>Si deseas ingresas al sistema de seguimiento de reportes, da clic en Ingresa a Reportes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="85d28f445f6b9de1c0e2fbb0f7f16f83bd026cbb" datatype="html">
+        <source>Ingresa a Reportes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="14bff777ec54e2682941d73b7e7bc10f8a9177ec" datatype="html">
+        <source>Si deseas salir de tu cuenta, da clic en Termina la sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="aec662da6360e6998c0ff6adfa43d4d18597ffff" datatype="html">
+        <source>Termina la sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/admin/admin.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dc18ffd08cda9825ab29ee1e1dae6f3380626f5d" datatype="html">
+        <source>Reportes Activos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reportes-activos/reportes-activos.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1c20fa2cc4e0872f2fd9d2132cd34c09783a3f8a" datatype="html">
+        <source>Regresar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reportes-activos/reportes-activos.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-enviado/reporte-enviado.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ae75652ee3c9247b0a42f5e8f9b9fdb1d268468e" datatype="html">
+        <source>Reportes Totales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/lista-reportes/lista-reportes.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6651cb97694dc0db87a5d2de77f367b6987bbab8" datatype="html">
+        <source>Lista de todos los reportes hechos en el portal.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/lista-reportes/lista-reportes.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4e49297e04565d64e742068a871a5c86aa4658a3" datatype="html">
+        <source>En esta lista se encuentran todos los reportes hechos en el portal, a diferencia de la pestaña Reportes que contiene solo los reportes activos.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/lista-reportes/lista-reportes.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5fafaf9129855b84bfad8bc7424cfe46391d84a5" datatype="html">
+        <source>Por revisar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="46c8e3fae5f42410033cd8bc8cdb25fcd3f03b5e" datatype="html">
+        <source>Revisado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c0cfd3e88d5d6af1d5f23914fb74cb353a83811" datatype="html">
+        <source>Eliminar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="33cdfd03beac6fe77299e7c653aa96b329466870" datatype="html">
+        <source>Información del Reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e9e588741024086a4b24d5db5da4f5c540a07f30" datatype="html">
+        <source>Correo electrónico</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="662afc70bc71dc969527402db77814797ef8a446" datatype="html">
+        <source>Dirección</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2117b67be9fbf782965d97d4d8a61875576c85bc" datatype="html">
+        <source>Referencia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add33278813fedc2a94570f575a7f226fb7bf87d" datatype="html">
+        <source>Comentario del Administrador</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-admin/reporte-admin.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="54def3f77e9b26ddf45d4987e5e4934a104e7ee6" datatype="html">
+        <source>El reporte ha sido enviado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-enviado/reporte-enviado.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="bf0f5c0a4bda5261ff6ea1d4a09b713b62b84234" datatype="html">
+        <source>Las dependencias se harán cargo de ello</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/reporte-enviado/reporte-enviado.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9b4ca5dd2c8988b40dcecca520f1422b29497b70" datatype="html">
+        <source>Gráficas</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/grafica/grafica.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-admin/header-admin.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="461e8dbf00866ae7933d3e8f26c3f3c3a9a10de3" datatype="html">
+        <source>La primer gráfica muestra el tipo de personas que respondieron la encuesta. La segunda gráfica el numero de reportes resueltos</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/grafica/grafica.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="247be2d09e8bf91c803eb759ade6e3e3d8ba8e6e" datatype="html">
+        <source>La página que estás buscando no existe.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page-not-found/page-not-found.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6565c639945a3bd63f7146b34a4194379d379756" datatype="html">
+        <source>Reportes<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>(current)<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-admin/header-admin.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e8fa4d4fe3d5a97ff3fc21fc53021a1a8ee354a8" datatype="html">
+        <source>Lista</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-admin/header-admin.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d5841f775516e481cf4fe2917f65048c72fd3000" datatype="html">
+        <source>Ir a menú</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-admin/header-admin.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9e2c05d29f9dd1eeb557fc06837c6451b0336795" datatype="html">
+        <source>Regresar a menú</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header-admin/header-admin.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="39ffdf37836c38b646a55f7e4d8da8a7055f9477" datatype="html">
+        <source>Busca un reporte</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="69cc5e771adecde39929c1e938446c0fe997f780" datatype="html">
+        <source>Reporte #:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1ac4beba309c3357bf6875f3977c0c1c1b3859e4" datatype="html">
+        <source>Comentario:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="20de7814985da87fe6648630d9e14b67324ddd2b" datatype="html">
+        <source>Nombre:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/all-reports/all-reports-component/all-reports.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
