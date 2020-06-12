@@ -4,16 +4,16 @@
   <div class="text-heading">
     <div id="report-number">
       <br><br><br>
-      <h1>{{ "CLIENTEENVIADO.TITLE" | translate }} </h1>
+      <h1 i18n>¡Tu reporte ha sido enviado!</h1>
       <br>
-      <h2>{{ "CLIENTEENVIADO.SUBTITLE"| translate }} </h2>
+      <h2 i18n>El número de reporte es:</h2>
       
       <div *ngIf="numeroReporte">
         <h3>{{numeroReporte}}</h3>
       </div>
     </div>
     <br><br>
-    <a [routerLink]="['/home']" routerLinkActive="router-link-active"  class="btn btn-success" role="button">{{ "CLIENTEENVIADO.INICIO"| translate }}</a>
+    <a [routerLink]="['/home']" routerLinkActive="router-link-active"  class="btn btn-success" role="button" i18n>Regresar a Inicio</a>
   </div>
  </div>  
   

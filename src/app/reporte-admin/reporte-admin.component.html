@@ -2,54 +2,52 @@
 <div class="container">
   <br>
     <div class="text-heading" >
-      <h1>{{ "REPORTADMIN.TITLE" | translate }}</h1>
+      <h1></h1>
     </div>
     <a *ngFor="let report of All_reports" class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/reporte-admin']" routerLinkActive="router-link-active" >
-      <h2>{{ "REPORTADMIN.SUBTITLE" | translate }} {{report._id}}</h2>
+      <h2 i18n>Reporte #</h2><h2>{{report._id}}</h2>
       <div class = "form-group">
-        <span class="badge badge-pill badge-secondary" *ngIf="!report.comentarioAdmin">Por revisar</span>
-        <span class="badge badge-pill badge-danger" *ngIf="report.comentarioAdmin">Revisado</span>
+        <span class="badge badge-pill badge-secondary" *ngIf="!report.comentarioAdmin" i18n>Por revisar</span>
+        <span class="badge badge-pill badge-danger" *ngIf="report.comentarioAdmin" i18n>Revisado</span>
       </div>
-      <a [routerLink]="['/reporte-enviado']" routerLinkActive="router-link-active"  class="btn btn-danger" (click)="onSubmit()">Eliminar</a>
+      <a [routerLink]="['/reporte-enviado']" routerLinkActive="router-link-active"  class="btn btn-danger" (click)="onSubmit()" i18n>Eliminar</a>
 
-      <p class="text-secondary">{{ "REPORTADMIN.DESCRIPTION" | translate }}</p>  
+      <p class="text-secondary" i18n>Información del Reporte</p>  
       <ul id="lista-reportes" class="list-group">
-        <li class="text-secondary">{{ "REPORT.NOMBRE" | translate }}</li>  
+        <li class="text-secondary" i18n>Nombre(s)</li>  
         <li class="list-group-item">{{ report.nombre }}</li>
   
-        <li class="text-secondary">{{ "REPORT.APELLIDO" | translate }}</li>  
+        <li class="text-secondary" i18n>Apellido(s)</li>  
         <li class="list-group-item">{{ report.apellido }}</li>
         
-        <li class="text-secondary">{{ "REPORT.CORREO" | translate }}</li>  
+        <li class="text-secondary" i18n>Correo electrónico</li>  
         <li class="list-group-item">{{ report.correo }}</li>
         
-        <li class="text-secondary">{{ "REPORT.DIRECCION" | translate }}</li>  
+        <li class="text-secondary" i18n>Dirección</li>  
         <li class="list-group-item">{{ report.direccion }}</li>
         
-        <li class="text-secondary">{{ "REPORT.REFERENCIA" | translate }}</li>  
+        <li class="text-secondary" i18n>Referencia</li>  
         <li class="list-group-item">{{ report.referencia }}</li>
         
-        <li class="text-secondary">{{ "REPORT.PROFESION" | translate }}</li>  
+        <li class="text-secondary" i18n>Referencia de la dirección*</li>  
         <li class="list-group-item">{{ report.tipoPersona}}</li>
         
-        <li class="text-secondary">{{ "REPORT.WRITEREPORT" | translate }}</li>  
+        <li class="text-secondary" i18n>¿Qué hacía cuando se encontró con la fuga?*</li>  
         <li class="list-group-item">{{ report.comentario }}</li>
-  
-        <li class="text-secondary">{{ "REPORT.IMAGEN" | translate }}</li>  
         <br>
       </ul>
       <div class="container-report-comments">
         <div class="form-group" *ngIf="!report.comentarioAdmin">
-          <label for="exampleFormControlTextarea1">{{ "REPORTADMIN.COMENTARIO" | translate }}</label>
+          <label for="exampleFormControlTextarea1" i18n>Comentario del Administrador</label>
           <textarea class="form-control" #comentarioAdmin id="exampleFormControlTextarea1" rows="3"></textarea>
           <br>
-          <a [routerLink]="['/reporte-enviado']" *ngIf="!report.comentarioAdmin" routerLinkActive="router-link-active"  class="btn btn-success" (click)="onSubmitAdmin(comentarioAdmin)">Enviar</a>
+          <a [routerLink]="['/reporte-enviado']" *ngIf="!report.comentarioAdmin" routerLinkActive="router-link-active"  class="btn btn-success" (click)="onSubmitAdmin(comentarioAdmin)" i18n>Enviar</a>
         </div>
         <div class="form-group" *ngIf="report.comentarioAdmin">
-          <li class="text-secondary">Comentario del Administrador</li>  
+          <li class="text-secondary" i18n>Comentario del Administrador</li>  
           <li class="list-group-item">{{report.comentarioAdmin}}</li>
           <br>
-          <a [routerLink]="['/reportes-activos']" *ngIf="report.comentarioAdmin" routerLinkActive="router-link-active"  class="btn btn-secondary" (click)="onSubmitBack()">Regresar</a>
+          <a [routerLink]="['/reportes-activos']" *ngIf="report.comentarioAdmin" routerLinkActive="router-link-active"  class="btn btn-secondary" (click)="onSubmitBack()" i18n>Regresar</a>
         </div>
         
       </div>
