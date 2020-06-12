@@ -1,5 +1,4 @@
 export class Report {
-  
     constructor(
       public _id?: number,
       public numeroReporte?: number,
@@ -10,6 +9,4 @@ export class Report {
       public notificado?: string)
       {
     }
-
-    
   }

@@ -12,7 +12,7 @@ export class DataService {
   private content5 = new BehaviorSubject<string>('N/A');
   private content6 = new BehaviorSubject<string>('N/A');
   private content7 = new BehaviorSubject<string>('N/A');
-  private content8 = new BehaviorSubject<String>('N/A');
+  private content8 = new BehaviorSubject<string>('N/A');
   public share = this.content.asObservable();
   public share2 = this.content2.asObservable();
   public share3 = this.content3.asObservable();

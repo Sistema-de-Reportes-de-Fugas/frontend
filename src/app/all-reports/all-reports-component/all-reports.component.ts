@@ -9,16 +9,15 @@ import { FilterPipe } from '../pipes/filter.pipe';
   templateUrl: './all-reports.component.html',
   styleUrls: ['./all-reports.component.scss']
 })
-export class AllReportsComponent{
+export class AllReportsComponent implements OnInit{
   allReports: Report[];
   report: Report[];
   id: string;
   message: string;
   pageactual: 1;
   actualPage: any;
-  filterPost = ''
+  filterPost = '';
   constructor(public Service: AllReportsService){}
-  
 
   ngOnInit(): void {
     this.getReports();
@@ -31,7 +30,7 @@ export class AllReportsComponent{
       this.allReports = data;
       console.log('respuesta de alumno->' + this.allReports);
     });
-  }  
+  }
   onSubmit(id) {
     this.id = id;
     console.log(this.id);

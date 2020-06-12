@@ -28,7 +28,8 @@ export class ReporteClienteServiceService {
     const body = res;
     const lastReportDone = body[Object.keys(body)[Object.keys(body).length - 1]];
     // Tambien se puede cambiar al numero del reporte.
-    const _id = lastReportDone['_id'];
+    const idName = '_id';
+    const _id = lastReportDone[idName];
     console.log(_id);
 
     return _id || {};

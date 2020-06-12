@@ -32,21 +32,19 @@ export class ReporteAdminComponent implements OnInit {
   someInput: string;
   comentarioAdmin2: Reporte[];
   constructor(public Service: ReporteService, public servicio: AllReportsService, public fb: FormBuilder, private http: HttpClient){}
-  
+
   tipoPersonas = ['Reportero', 'Agente de la SSP', 'Transeunte', 'Comerciante', 'Otro'];
   // userModel = new User('','','','','', '','', null);
-  
   registrationForm = this.fb.group({
-    nombre: [""],
+    nombre: [''],
     apellido: [''],
     correo: [''],
     direccion: [''],
     referencia: [''],
     tipoPersona: [''],
     comentario: [''],
-    comentarioAdmin: ['']  
+    comentarioAdmin: ['']
   });
-
 
   ngOnInit(): void {
     this.servicio.currentMessage.subscribe(message => this.message = message);
@@ -79,11 +77,10 @@ export class ReporteAdminComponent implements OnInit {
         referencia: this.referencia2 ,
         tipoPersona: this.tipoPersona2,
         comentario: this.comentario2 ,
-        comentarioAdmin: this.comentarioAdmin2,       
+        comentarioAdmin: this.comentarioAdmin2,
       });
-    });    
+    });
   }
-
   onSubmit() {
     console.log('DELETE ACTIVATED');
     this.Service.deleteReportes(this.message).subscribe((data) => {
@@ -91,10 +88,8 @@ export class ReporteAdminComponent implements OnInit {
       console.log('respuesta de alumno->' + this.allReports);
     });
   }
-
   onSubmitAdmin(comentarioAdmin) {
     console.log(comentarioAdmin.value);
-    
     this.comentarioAdmin2 = comentarioAdmin.value;
     if (this.comentarioAdmin2) {
       console.log(this.comentarioAdmin2);
@@ -108,13 +103,10 @@ export class ReporteAdminComponent implements OnInit {
         comentario: this.comentario2 ,
         comentarioAdmin: comentarioAdmin.value,
       });
-
       console.log(this.registrationForm.value);
       console.log(this.message);
-      
       const data = this.registrationForm.value;
-      const headers= new HttpHeaders({'Content-Type':'application/json'});
-
+      const headers = new HttpHeaders({'Content-Type': 'application/json'});
       this.http.put(this.address + '/' + this.message, data, {headers}).subscribe(
       res => {
         console.log(res);
@@ -122,12 +114,10 @@ export class ReporteAdminComponent implements OnInit {
       err => {
         console.log('err:' + err);
       }
-      
     );
-
     }else {
       console.log('no existe');
-    }    
+    }
   }
   onSubmitBack() {
     console.log('Regresó');

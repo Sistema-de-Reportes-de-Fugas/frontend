@@ -5,7 +5,7 @@
     <div class="text-heading" >
       <h1></h1>
     </div>
-    <a *ngFor="let report of All_reports" class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/reporte-admin2']" routerLinkActive="router-link-active" >
+    <a *ngFor="let report of allReports" class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/reporte-admin2']" routerLinkActive="router-link-active" >
       <h2 i18n>Reporte #</h2><h2>{{report._id}}</h2>
       <div class = "form-group">
         <span class="badge badge-pill badge-secondary" *ngIf="!report.comentarioAdmin" i18n>Por revisar</span>
