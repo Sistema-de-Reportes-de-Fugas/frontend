@@ -2,11 +2,32 @@
 <div class="container">
     <div class="text-heading">
         <h1 i18n>Reportes Activos</h1>
-        <p class="text-secondary" i18n>Regresar</p>  
+        <h2 i18n>Lista de los reportes que aun faltan por resolver.</h2>
+        <p  i18n class="text-secondary">En esta página se encuentran los reportes que están pendientes por revisar, por favor haga su reporte. En cuanto el reporte esté listo, pasará a Reportes Totales.</p>  
     </div>
     <div id="sign-in">
         <div class="list-group">
-            <app-all-reports></app-all-reports>
+            <div class="form-group">
+                <label i18n for="exampleFormControlInput1">Busca un reporte</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="filterPost" placeholder="Busca.." [(ngModel)]="filterPost">
+              </div>
+            <a *ngFor="let report of All_reports | paginate: { itemsPerPage: 10, currentPage: actualPage } | filter: filterPost; let i = index;" class="list-group-item list-group-item-action flex-column align-items-start" [routerLink]="['/reporte-admin2']" routerLinkActive="router-link-active" (click)="onSubmit(report._id)">
+                
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 i18n class="mb-1">Reporte #:</h5><h5>{{report._id}}</h5>
+                    <small>
+                      <span i18n class="badge badge-pill badge-secondary" *ngIf="!report.comentarioAdmin">Por revisar</span>
+                      <span i18n class="badge badge-pill badge-danger" *ngIf="report.comentarioAdmin">Revisado</span>
+                      {{i+1}}
+                    </small>
+                    
+                </div>
+                  <p i18n class="mb-1">Comentario:</p><p>{{report.comentario}}</p>
+                  <small i18n class="text-muted">Nombre:</small><small>{{report.nombre}} {{report.apellido}}</small>
+            </a>
+            <br>
+            <pagination-controls (pageChange)="actualPage = $event"></pagination-controls>
+            
         <br><br>
         </div>
       </div>
