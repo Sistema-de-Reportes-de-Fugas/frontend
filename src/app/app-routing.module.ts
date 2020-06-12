@@ -7,6 +7,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ReportesActivosComponent } from './reportes-activos/reportes-activos.component';
 import { ListaReportesComponent } from './lista-reportes/lista-reportes.component';
 import { ReporteAdminComponent } from './reporte-admin/reporte-admin.component';
+import { ReporteAdmin2Component } from './reporte-admin2/reporte-admin2.component';
 import { ReporteEnviadoComponent } from './reporte-enviado/reporte-enviado.component';
 import { ContainerHomeComponent } from './container-home/container-home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'reportes-activos', component: ReportesActivosComponent},
   { path: 'lista-reportes', component: ListaReportesComponent},
   { path: 'reporte-admin', component: ReporteAdminComponent},
+  { path: 'reporte-admin2', component: ReporteAdmin2Component},
   { path: 'reporte-enviado', component: ReporteEnviadoComponent},
   { path: 'grafica', component: GraficaComponent},
   { path: '**', component: PageNotFoundComponent}
@@ -44,4 +46,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 // tslint:disable-next-line:max-line-length
-export const routingComponents = [ContainerHomeComponent, ReporteComponent, ReporteClienteEnviadoComponent, EstadoComponent, AdminComponent, ReportesActivosComponent, ListaReportesComponent, ReporteAdminComponent, ReporteEnviadoComponent, GraficaComponent, PageNotFoundComponent];
+export const routingComponents = [ContainerHomeComponent, ReporteComponent, ReporteClienteEnviadoComponent, EstadoComponent, AdminComponent, ReportesActivosComponent, ListaReportesComponent, ReporteAdminComponent, ReporteAdmin2Component, ReporteEnviadoComponent, GraficaComponent, PageNotFoundComponent];
