@@ -25,10 +25,10 @@ import { AuthService } from '../services/auth.service';
 
 export class ContainerHomeComponent implements OnInit {
   state = 'small';
-  
+
   constructor(public auth: AuthService) { }
-  
-  
+
+
   ngOnInit(): void {
   }
 

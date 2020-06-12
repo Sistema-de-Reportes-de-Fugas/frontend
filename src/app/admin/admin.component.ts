@@ -10,8 +10,7 @@ export class AdminComponent implements OnInit {
 
   loginUserData = {};
   constructor(public fb: FormBuilder, public auth: AuthService) { }
-  
-  
+
   ngOnInit(): void {
   }
   /*
@@ -21,7 +20,7 @@ export class AdminComponent implements OnInit {
   });
   ngOnInit(): void {
   }
-  
+
   onSubmit() {
     const correo = this.registrationForm.controls.correo.value;
     const contrasena = this.registrationForm.controls.contrasena.value;

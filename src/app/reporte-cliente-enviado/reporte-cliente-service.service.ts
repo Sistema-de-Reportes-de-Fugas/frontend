@@ -9,7 +9,7 @@ export class ReporteClienteServiceService {
 
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
-    var headerDict = {
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -23,11 +23,11 @@ export class ReporteClienteServiceService {
   }
 
   private extractData(res: Response) {
-    let body = res;
-    let lastReportDone = body[Object.keys(body)[Object.keys(body).length - 1]]
-    //Tambien se puede cambiar al numero del reporte.
-    let _id = lastReportDone["_id"]; 
-    console.log(_id)
+    const body = res;
+    const lastReportDone = body[Object.keys(body)[Object.keys(body).length - 1]];
+    // Tambien se puede cambiar al numero del reporte.
+    const _id = lastReportDone._id;
+    console.log(_id);
 
     return _id || {};
   }

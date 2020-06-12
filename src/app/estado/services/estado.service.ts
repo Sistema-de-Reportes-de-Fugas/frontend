@@ -9,12 +9,12 @@ import { Reporte } from '../models/reporte';
 })
 export class EstadoService {
 
-  reporte: Reporte[]
+  reporte: Reporte[];
 
   getReportes(id: string): Observable<any> {
-    console.log(id)
+    console.log(id);
     console.log('estoy en el getALumnos');
-    var headerDict = {
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -25,15 +25,15 @@ export class EstadoService {
     };
 
     return this.http.get('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-    
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
+
   }
 
   deleteReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
-    var headerDict = {
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -44,16 +44,16 @@ export class EstadoService {
     };
 
     return this.http.delete('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-    
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
+
   }
-  
+
   private extractData(res: Response) {
-    let body = Array.of(res);
-    
-    return body|| {};
+    const body = Array.of(res);
+
+    return body || {};
   }
 
   handleError(error: HttpErrorResponse) {
@@ -70,9 +70,9 @@ export class EstadoService {
   }
 
 
-  //getReports() {
+  // getReports() {
    // return REPORTS;
-  //}
+  // }
 
   constructor(private http: HttpClient) { }
 }
