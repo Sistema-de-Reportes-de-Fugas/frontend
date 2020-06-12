@@ -10,7 +10,8 @@ export class AdminComponent implements OnInit {
 
   loginUserData = {};
   constructor(public fb: FormBuilder, public auth: AuthService) { }
-
+  
+  
   ngOnInit(): void {
   }
   /*
@@ -20,13 +21,17 @@ export class AdminComponent implements OnInit {
   });
   ngOnInit(): void {
   }
+  
   onSubmit() {
     const correo = this.registrationForm.controls.correo.value;
     const contrasena = this.registrationForm.controls.contrasena.value;
     console.log(correo, contrasena);
+
     localStorage.setItem('loggedIn', 'true');
     localStorage.setItem('persona', correo );
     localStorage.setItem('contrasena', contrasena);
+
   }*/
   // obtenerLocalStorage
+
 }

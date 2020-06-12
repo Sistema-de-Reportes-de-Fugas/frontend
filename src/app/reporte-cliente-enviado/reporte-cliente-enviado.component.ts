@@ -21,4 +21,7 @@ export class ReporteClienteEnviadoComponent implements OnInit {
       console.log('respuesta de reportes->' + this.numeroReporte);
     });
   }
+
+  
+
 }

@@ -8,10 +8,12 @@ import { map, retry, catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class GraficaService {
+
   reporte: Reporte[];
+  
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
-    const headerDict = {
+    var headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -20,14 +22,15 @@ export class GraficaService {
     const requestOptions = {
       headers: new HttpHeaders(headerDict),
     };
-    const address = 'http://localhost:8080/api/reportes';
-    return this.http.get(address, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+
+    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
   }
 
+
   private extractData(res: Response) {
-    const body = res;
-    console.log(body);
-    return body || {};
+    let body = res;
+    console.log(body)
+    return body|| {};
   }
 
   handleError(error: HttpErrorResponse) {
@@ -42,10 +45,11 @@ export class GraficaService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-
-  // getReports() {
+  
+  
+  //getReports() {
    // return REPORTS;
-  // }
+  //}
 
   constructor(private http: HttpClient) { }
 }
