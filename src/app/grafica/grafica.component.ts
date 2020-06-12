@@ -24,7 +24,7 @@ export class GraficaComponent implements OnInit {
   lentotal: number;
   ngOnInit() {
 
-    this.getReports(); 
+    this.getReports();
 
     this.chart = new Chart('bar', {
       type: 'bar',
@@ -36,12 +36,12 @@ export class GraficaComponent implements OnInit {
         },
         scales: {
           yAxes: [{
-              display: true,
-              ticks: {
-                     // minimum will be 0, unless there is a lower value.
-                  // OR //
-                  beginAtZero: true   // minimum value will be 0.
-              }
+            display: true,
+            ticks: {
+              // minimum will be 0, unless there is a lower value.
+              // OR //
+              beginAtZero: true   // minimum value will be 0.
+            }
           }]
         }
       },
@@ -86,7 +86,7 @@ export class GraficaComponent implements OnInit {
         }
       }
     };
-    this.doughnut =  new Chart('doughnut', {
+    this.doughnut = new Chart('doughnut', {
       type: 'doughnut',
       options: {
         responsive: true,
@@ -120,86 +120,84 @@ export class GraficaComponent implements OnInit {
 
     });
   }
-  
-  counter=0;
+
+  counter = 0;
   getReports() {
     this.Service.getReportes().subscribe((data) => {
-      this.All_reports = data;      
+      this.All_reports = data;
       console.log('respuesta de alumno->' + this.All_reports);
 
-      this.len = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Reportero";
+      this.len = this.All_reports.filter(function(item) {
+        return item.tipoPersona === 'Reportero';
       }).length;
-      console.log(this.len)
-    
-      this.len2 = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Agente de la SSP";
-      }).length;
-      console.log(this.len2)
+      console.log(this.len);
 
-      this.len3 = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Transeunte";
+      this.len2 = this.All_reports.filter(function(item) {
+        return item.tipoPersona === 'Agente de la SSP';
       }).length;
-      console.log(this.len3)
+      console.log(this.len2);
 
-      this.len4 = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Comerciante";
+      this.len3 = this.All_reports.filter(function(item) {
+        return item.tipoPersona === 'Transeunte';
       }).length;
-      console.log(this.len4)
+      console.log(this.len3);
 
-      this.len5 = this.All_reports.filter(function (item) {
-        return item.tipoPersona == "Otro";
+      this.len4 = this.All_reports.filter(function(item) {
+        return item.tipoPersona === 'Comerciante';
       }).length;
-      console.log(this.len5)
-      
+      console.log(this.len4);
+
+      this.len5 = this.All_reports.filter(function(item) {
+        return item.tipoPersona === 'Otro';
+      }).length;
+      console.log(this.len5);
+
       this.lentotal = this.len + this.len2 + this.len3 + this.len4 + this.len5;
-      console.log(this.lentotal)
-      
-      
-      this.chart.chart.data.datasets[0].data = [this.len, this.len2, this.len3, this.len4, this.len5]
-      this.doughnut.chart.data.datasets[0].data = [this.lentotal]
-      
-      this.chart.chart.update()
-      this.doughnut.chart.update()
-      
-      
-    
+      console.log(this.lentotal);
+
+
+      this.chart.chart.data.datasets[0].data = [this.len, this.len2, this.len3, this.len4, this.len5];
+      this.doughnut.chart.data.datasets[0].data = [this.lentotal];
+
+      this.chart.chart.update();
+      this.doughnut.chart.update();
+
     });
 
     setTimeout(() => {
-      this.chart.chart.update()        
+      this.chart.chart.update();
     }, 2600);
-    
+
   }
 
-   updateChart() {
+  updateChart() {
     this.chart.update(); // This re-renders the canvas element.
   }
-  
-  
+
+
 
 
   addData(chart, label, data) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
+      dataset.data.push(data);
     });
     chart.update();
-}
+  }
 
-removeData(chart) {
+  removeData(chart) {
     chart.data.labels.pop();
     chart.data.datasets.forEach((dataset) => {
-        dataset.data.pop();
+      dataset.data.pop();
     });
     chart.update();
-}
+  }
 
 
-updateChartData(chart, data, dataSetIndex){
-  chart.data.datasets[dataSetIndex].data = data;
-  chart.update();
-}
+  updateChartData(chart, data, dataSetIndex) {
+    chart.data.datasets[dataSetIndex].data = data;
+    chart.update();
+  }
 
-constructor(public Service: GraficaService) { }
+  constructor(public Service: GraficaService) { }
 }

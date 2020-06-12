@@ -25,7 +25,7 @@ export class InterceptorService implements HttpInterceptor {
         const tokenReq = req.clone({
           setHeaders: { Authorization: `Bearer ${token}` }
         });
-        console.log(token)
+        console.log(token);
         return next.handle(tokenReq);
       }),
       catchError(err => throwError(err))

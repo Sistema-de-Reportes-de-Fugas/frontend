@@ -11,14 +11,15 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class ReporteService {
 
   reporte: Report[];
-  
-  private messageSource = new BehaviorSubject<string>("default message");
+  address: 'http://localhost:8080/api/reportes';
+
+  private messageSource = new BehaviorSubject<string>('default message');
   currentMessage = this.messageSource.asObservable();
 
   getReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
-    console.log(id)
-    var headerDict = {
+    console.log(id);
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -28,17 +29,16 @@ export class ReporteService {
       headers: new HttpHeaders(headerDict),
     };
 
-    return this.http.get('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-    
+    return this.http.get(this.address + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
   }
 
   updateReportes(id: string): Observable<any> {
     console.log('estoy en el getALumnos');
-    
-    var headerDict = {
+
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -47,22 +47,20 @@ export class ReporteService {
     const requestOptions = {
       headers: new HttpHeaders(headerDict),
     };
-
-    //return this.http.put('http://localhost:8080/api/reportes' + '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
-    return this.http.put('http://localhost:8080/api/reportes' + '/' + id, requestOptions)
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes', requestOptions);
-    //return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
-    
+    // return this.http.put('http://localhost:8080/api/reportes' +
+    // '/' + id, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    return this.http.put(this.address + '/' + id, requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes', requestOptions);
+    // return this.http.get('http://localhost:8080/api/reportes' + '/' + '5edd22ddea83b761f8d358e5');
   }
 
 
   private extractData(res: Response) {
-    let body = res;
-    console.log(body)
-    return body|| {};
+    const body = res;
+    console.log(body);
+    return body || {};
   }
-  
   handleError(error: HttpErrorResponse) {
     let errorMessage = 'Unknown error!';
     if (error.error instanceof ErrorEvent) {
@@ -75,13 +73,11 @@ export class ReporteService {
     window.alert(errorMessage);
     return throwError(errorMessage);
   }
-  
-  changeMessage(message: string) {
-    this.messageSource.next(message)
-    console.log(message)
-  }
 
-  
+  changeMessage(message: string) {
+    this.messageSource.next(message);
+    console.log(message);
+  }
 
   constructor(private http: HttpClient) { }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { map, retry, catchError, tap } from 'rxjs/operators';
-import { Report } from '../report'
+import { Report } from '../report';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable({
@@ -17,7 +17,7 @@ export class AllReportsService {
 
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
-    var headerDict = {
+    const headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -32,8 +32,8 @@ export class AllReportsService {
 
   private extractData(res: Response) {
     let body = res;
-    console.log(body)
-    return body|| {};
+    console.log(body);
+    return body || {};
   }
 
   handleError(error: HttpErrorResponse) {
@@ -47,10 +47,9 @@ export class AllReportsService {
     }
     window.alert(errorMessage);
     return throwError(errorMessage);
-  }
-  
+  }  
   changeMessage(message: string) {
-    this.messageSource.next(message)
+    this.messageSource.next(message);
   }
 
 
