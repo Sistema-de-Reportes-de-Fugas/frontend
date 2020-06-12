@@ -1,4 +1,5 @@
-# Proyecto de la Clase de Desarrollo de Aplicaciones Web
+# Proyecto de la Clase de Desarrollo de Aplicaciones Web - Entrega Final
+
 Profesor: Juan Velez Ballesteros
 
 Andrés Campos Tams A01024385
