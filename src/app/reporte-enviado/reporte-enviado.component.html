@@ -1,11 +1,12 @@
 <app-header-admin></app-header-admin>
 <div class="container">
   <div class="text-heading">
-    <h1>{{ "REPORTEENVIADO.TITLE" | translate }}</h1>
+    <h1 i18n>El reporte ha sido enviado</h1>
+    <h1 i18n>Las dependencias se harán cargo de ello</h1>
   </div>
   <br><br>
   <div class="container-report-comments">
     <a [routerLink]="['/reportes-activos']" routerLinkActive="router-link-active"
-      class="btn btn-primary">{{ "REPORTEENVIADO.BUTTON" | translate }}</a>
+      class="btn btn-primary" i18n>Regresar</a>
   </div>
 </div>

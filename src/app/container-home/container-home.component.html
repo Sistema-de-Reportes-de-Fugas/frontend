@@ -6,13 +6,13 @@
 <div class="container">
   <div class = "text-heading">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">{{ "HOME.BIENVENIDO" | translate }}
+    <h1 i18n class="mt-4 mb-3">¡Bienvenido!
       <small></small>
     </h1>
-    <div *ngIf="auth.loggedIn" class="alert alert-success" role="alert">
+    <div i18n *ngIf="auth.loggedIn" class="alert alert-success" role="alert">
       Hola, te encuentras como administrador. 
     </div>
-    <h2> {{ "HOME.SUBTITLE" | translate }}</h2>
+    <h2 i18n>Sistema de reportes de fuga de agua de la Ciudad de México</h2>
     <!-- Image Header -->
     <img @enterState class="img-fluid rounded mb-4" src="assets/images/cdmx.jpg" alt="">
   </div>
@@ -20,34 +20,34 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">{{ "HOME.MAKEREPORT" | translate }}</h4>
+          <h4 i18n class="card-header">¡Reporta!</h4>
           <div class="card-body">
-            <p class="card-text">{{ "HOME.REPORTDESC" | translate }}</p>
+            <p i18n class="card-text">Muchas gracias por tu contribución con la ciudad. Si deseas realizar un reporte de fuga de agua, da clic aquí.</p>
           </div>
           <div class="card-footer">
-            <a [routerLink]="['/reporte']" routerLinkActive="router-link-active"  class="btn btn-primary">{{ "HOME.MAKEREPORT" | translate }}</a>
+            <a i18n [routerLink]="['/reporte']" routerLinkActive="router-link-active"  class="btn btn-primary">Reporte</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">{{ "HOME.CHECKSTATUS" | translate }}</h4>
+          <h4 i18n class="card-header">Estado</h4>
           <div class="card-body">
-            <p class="card-text">{{ "HOME.STATUSREPORT" | translate }}</p>
+            <p i18n class="card-text">Si ya hiciste un reporte y deseas saber si la fuga ya fue compuesta, da clic aquí.</p>
           </div>
           <div class="card-footer">
-            <a [routerLink]="['/estado']" routerLinkActive="router-link-active"  class="btn btn-primary">{{ "HOME.CHECKSTATUS" | translate }}</a>
+            <a i18n [routerLink]="['/estado']" routerLinkActive="router-link-active"  class="btn btn-primary">Estado</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">{{ "HOME.THEPLATFORM" | translate }}</h4>
+          <h4 i18n class="card-header">La Plataforma</h4>
           <div class="card-body">
-            <p class="card-text">{{ "HOME.THEPLATFORMDESC" | translate }}</p>
+            <p i18n class="card-text">Si deseas saber mas información de esta plataforma da clic aquí.</p>
           </div>
           <div class="card-footer">
-            <a href="proyectexplanation.html" class="btn btn-primary">{{ "HOME.THEPLATFORM" | translate }}</a>
+            <a i18n href="proyectexplanation.html" class="btn btn-primary">Explicación</a>
           </div>
         </div>
       </div>
