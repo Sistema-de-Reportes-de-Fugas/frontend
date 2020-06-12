@@ -12,7 +12,6 @@ export class DataService {
   private content5 = new BehaviorSubject<string>('N/A');
   private content6 = new BehaviorSubject<string>('N/A');
   private content7 = new BehaviorSubject<string>('N/A');
-  private content8 = new BehaviorSubject<string>('N/A');
   public share = this.content.asObservable();
   public share2 = this.content2.asObservable();
   public share3 = this.content3.asObservable();
@@ -20,7 +19,6 @@ export class DataService {
   public share5 = this.content5.asObservable();
   public share6 = this.content6.asObservable();
   public share7 = this.content7.asObservable();
-  public share8 = this.content8.asObservable();
   constructor() { }
 
   updateData(text){
@@ -43,8 +41,5 @@ export class DataService {
   }
   updateComentarios(comentarios){
     this.content7.next(comentarios);
-  }
-  updateIdioma(idioma){
-    this.content8.next(idioma);
   }
 }

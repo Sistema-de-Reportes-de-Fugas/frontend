@@ -10,14 +10,15 @@ import { ReportesActivosPipe } from './pipes/reportes-activos.pipe';
   styleUrls: ['./reportes-activos.component.scss']
 })
 export class ReportesActivosComponent implements OnInit {
-  allReports: Report[];
+  All_reports: Report[];
   report: Report[];
   id: string;
-  message: string;
-  pageactual: 1;
+  message:string;
+  pageactual: number =1;
   actualPage: any;
-  filterPost = '';
+  filterPost = ''
   constructor(public Service: ReportesActivosService){}
+  
 
   ngOnInit(): void {
     this.getReports();
@@ -27,22 +28,29 @@ export class ReportesActivosComponent implements OnInit {
 
   getReports() {
     this.Service.getReportes().subscribe((data) => {
-      this.allReports = data.filter(item => {
+      this.All_reports = data.filter(item => {
         if (!item.comentarioAdmin) {
           return item;
         }
       });
-      console.log('respuesta de alumno->' + this.allReports);
+
+      console.log('respuesta de alumno->' + this.All_reports);
     });
   }
+
+  
+  
   onSubmit(id) {
     this.id = id;
     console.log(this.id);
+    console.log("holaaa");
     this.newMessage();
+    
   }
   newMessage() {
     this.Service.changeMessage(this.id);
   }
+
 }
 
 

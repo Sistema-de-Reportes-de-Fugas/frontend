@@ -51,7 +51,7 @@
               "aot": true,
               "i18nFile": "locale/messages.en.xlf",
               "i18nFormat": "xlf",
-              "i18nLocale": "en",
+              "i18nLocale": "pt",
               "i18nMissingTranslation": "error"
             },
 

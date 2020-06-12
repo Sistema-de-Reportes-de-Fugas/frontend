@@ -7,11 +7,9 @@ import { map, retry, catchError, tap } from 'rxjs/operators';
 })
 export class ReporteClienteServiceService {
 
-  address: 'http://localhost:8080/api/reportes';
-
   getReportes(): Observable<any> {
     console.log('estoy en el getALumnos');
-    const headerDict = {
+    var headerDict = {
       'Content-Type': 'application/json',
       Accept: '*/*',
       'Access-Control-Allow-Origin': '*',
@@ -21,16 +19,15 @@ export class ReporteClienteServiceService {
       headers: new HttpHeaders(headerDict),
     };
 
-    return this.http.get(this.address, requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
+    return this.http.get('http://localhost:8080/api/reportes', requestOptions).pipe(map(this.extractData), retry(3), catchError(this.handleError));
   }
 
   private extractData(res: Response) {
-    const body = res;
-    const lastReportDone = body[Object.keys(body)[Object.keys(body).length - 1]];
-    // Tambien se puede cambiar al numero del reporte.
-    const idName = '_id';
-    const _id = lastReportDone[idName];
-    console.log(_id);
+    let body = res;
+    let lastReportDone = body[Object.keys(body)[Object.keys(body).length - 1]]
+    //Tambien se puede cambiar al numero del reporte.
+    let _id = lastReportDone["_id"]; 
+    console.log(_id)
 
     return _id || {};
   }
